@@ -19,10 +19,10 @@ export const ContactForm = () => {
 
   const handleBtnClicked = (idx) => {
     const newState = [...fields];
-    newState[idx].divClass = newState[idx].divClass + " " + "fold-up";
+    newState[idx].divClass = `${newState[idx].divClass} fold-up`;
     setFields(newState);
 
-    if (idx == fields.length - 1) {
+    if (idx === fields.length - 1) {
       setIsSuccessMsg(true);
     }
   }

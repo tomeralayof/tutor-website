@@ -5,7 +5,7 @@ export const WelcomePage = () => {
     return (
         <React.Fragment>
             <Header text = {"{ ללמוד תכנות בקלות }"} />
-        <p>שיעורים פרטיים בתכנות במגוון שפות ולכל מטרה</p>
+            <p>שיעורים פרטיים בתכנות במגוון שפות ולכל מטרה</p>
         </React.Fragment>
     )
 }

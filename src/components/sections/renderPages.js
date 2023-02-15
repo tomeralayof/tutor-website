@@ -3,11 +3,11 @@ import { WelcomePage } from "../pages/welcomePage";
 
 const setupPage = (page,idx) => {
   const cssClass = 'st-panel';
-  const cssClassActive = cssClass + " " + 'st-color';
+  const cssClassActive = `${cssClass} st-color`;
 
   return {
     id : idx + 1,
-    cssClass : (idx + 1) % 2 == 0 ? cssClass : cssClassActive,
+    cssClass : (idx + 1) % 2 === 0 ? cssClass : cssClassActive,
     component : page,
     icon : '&#xf069'
   }

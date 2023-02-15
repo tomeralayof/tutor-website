@@ -3,7 +3,7 @@ const initInputObj = (data,idx) => {
       value : "",
       name1 : data.name,
       placeholder : data.placeholder,
-      divClass : `input-section ${ data.name }-section ${idx != 0 ? "folded" : "" }`
+      divClass : `input-section ${ data.name }-section ${idx !== 0 ? "folded" : "" }`
     }
 }
 

@@ -9,7 +9,7 @@ export const Sections = () => {
   const pages = RenderPages();
   
     return (
-        <div class="st-scroll">
+        <div className = "st-scroll">
           {pages.map(page => (
             <Section key={page.id} page = {page} />
           ))}

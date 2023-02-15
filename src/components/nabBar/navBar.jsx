@@ -29,7 +29,7 @@ export const NavBar = () => {
               type = "radio"
               name = "radio-set"
               id = {option.id}
-              for={option.for}
+              htmlFor = {option.for}
               checked = { selectedOption === option.id }
               onChange = { handleChange }
               />

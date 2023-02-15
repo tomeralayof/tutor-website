@@ -6,7 +6,7 @@ export const RenderInputFileds = ( { fields,handleInputChange,handleBtnClicked }
     return (
         fields.map((filed, idx) => {
             return (
-              <div className = { filed.divClass } >
+              <div key = {idx} className = { filed.divClass } >
               <Input filed = {filed} handleInputChange = { handleInputChange }
                  placeHolder = {filed.placeHolder} idx = { idx }/>
               <Button filed = { filed } idx = { idx }

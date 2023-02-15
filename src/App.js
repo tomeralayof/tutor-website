@@ -7,8 +7,8 @@ import { Sections } from "./components/sections/sections"
 const App = () => {
   return (
     <React.Fragment>
-      <div class="container">
-        <div class="st-container">
+      <div className= "container">
+        <div className="st-container">
         <NavBar />
         <Sections />
         </div>
