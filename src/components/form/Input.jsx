@@ -1,15 +1,14 @@
 import React from "react";
 
-export const Input = ( {handleInputChange, placeHolder} ) => {
-    console.log(placeHolder)
+export const Input = ({ filed ,handleInputChange, placeHolder,idx } ) => {
     return (
         <input
-        onChange = { handleInputChange }
+        onChange = {(e) => handleInputChange(e,idx)}
         type = "text"
-        placeholder = { placeHolder }
+        placeholder = {filed.placeholder}
         className = "email"
-        style={{ direction: "rtl" }}
+        style= {{ direction: "rtl" }}
         autoComplete = "given-name"
-        />
+      />
     )
 }

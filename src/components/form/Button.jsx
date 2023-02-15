@@ -1,28 +1,32 @@
 import React from "react";
 
-import { faUser, faArrowUp } from "@fortawesome/free-solid-svg-icons";
+import { faUser, faArrowUp ,faEnvelope } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faPaperPlane } from '@fortawesome/free-solid-svg-icons';
+import { faCheck } from '@fortawesome/free-solid-svg-icons';
 
-export const Button = ( props ) => {
-    const setIcon = (inputVal) => {
-        const icon =  inputVal === "" ? faUser : faArrowUp;
-        return (
-            <FontAwesomeIcon icon = { icon } />
-        )
+export const Button = ( {filed, idx , lastIdx , handleBtnClicked} ) => {
+
+    const btnIcons = [ faUser, faEnvelope, faEnvelope];
+    
+    const renderIcon = ( filed,idx ) => {
+        let icon;
+
+        if (filed.value === "") {
+            icon = btnIcons[idx];
+        }
+
+        else {
+            icon = idx === lastIdx ? faCheck : faArrowUp;
+        }
+
+        return <FontAwesomeIcon icon = { icon }/>
     }
 
-    const setNextFiled = props[Object.keys(props)[1]];
-    const inputVal = props[Object.keys(props)[0]];
-
-     return (
+    return (
         <div className = "animated-button">
-          <span onClick = {() => setNextFiled(true)}
-            className = "icon-paper-plane"> 
-            {
-                setIcon(inputVal)
-            }
+            <span onClick = { () => handleBtnClicked(idx) }
+            className = "icon-paper-plane">  { renderIcon(filed,idx) }
           </span>
-        </div>
+          </div>
     )
 }
