@@ -1,0 +1,83 @@
+/* animations */
+#st-control-1:checked ~ .st-scroll #st-panel-1 p,
+ #st-control-2:checked ~ .st-scroll #st-panel-2 p,
+ #st-control-3:checked ~ .st-scroll #st-panel-3 p,
+ #st-control-4:checked ~ .st-scroll #st-panel-4 p,
+ #st-control-5:checked ~ .st-scroll #st-panel-5 p{
+   -webkit-animation: moveUp 0.6s ease-in-out 0.2s backwards;
+   -moz-animation: moveUp 0.6s ease-in-out 0.2s backwards;
+   -o-animation: moveUp 0.6s ease-in-out 0.2s backwards;
+   -ms-animation: moveUp 0.6s ease-in-out 0.2s backwards;
+   animation: moveUp 0.6s ease-in-out 0.2s backwards;
+ }
+ 
+ @-webkit-keyframes moveUp{
+   0% { 
+     -webkit-transform: translateY(40px); 
+     opacity: 0;
+   }
+   100% { 
+     -webkit-transform: translateY(0px);  
+     opacity: 1;
+   }
+ }
+ 
+ @-moz-keyframes moveUp{
+   0% { 
+     -moz-transform: translateY(40px); 
+     opacity: 0;
+   }
+   100% { 
+     -moz-transform: translateY(0px);  
+     opacity: 1;
+   }
+ }
+ 
+ @-o-keyframes moveUp {
+   0% { 
+     -o-transform: translateY(40px); 
+     opacity: 0;
+   }
+   100% { 
+     -o-transform: translateY(0px);  
+     opacity: 1;
+   }
+ }
+ 
+ @-ms-keyframes moveUp {
+   0% { 
+     -ms-transform: translateY(40px); 
+     opacity: 0;
+   }
+   100% { 
+     -ms-transform: translateY(0px);  
+     opacity: 1;
+   }
+ }
+ 
+ @keyframes moveUp {
+   0% { 
+     transform: translateY(40px); 
+     opacity: 0;
+   }
+   100% { 
+     transform: translateY(0px);  
+     opacity: 1;
+   }
+ }
+
+
+ .st-panel p {
+  position: absolute;
+  text-align: center;
+  font-size: 30px;
+  line-height: 22px;
+  color: #8b8b8b;
+  z-index: 2;
+  padding: 0;
+  width: 50%;
+  left: 25%;
+  top: 50%;
+  margin: 10px 0 0 0;
+  -webkit-backface-visibility: hidden;
+}

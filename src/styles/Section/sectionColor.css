@@ -1,0 +1,27 @@
+ /* Colored sections */
+  .st-color,
+ .st-deco {
+   /* background: #fa96b5; */
+   /* background: #2a1906c8; */
+
+   /* options */
+   /* background-color: #7F5A83; */
+   /* background-color:#3F0D12 */
+    background-color :#753a88
+   
+
+ }
+ .st-color [data-icon]:after {
+   color: #f13c76;
+ }
+ .st-color .st-deco {
+   background: #fff;
+ }
+ .st-color h2 {
+   color: #fff;
+   text-shadow: 1px 1px 1px rgba(0,0,0,0.1);
+ } 
+ .st-color p {
+   color: #fff;
+   color: rgba(255,255,255,0.8);
+ }

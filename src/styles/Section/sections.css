@@ -1,0 +1,107 @@
+/* page move animation */
+#st-control-1:checked ~ .st-scroll {
+    -webkit-transform: translateY(0%);
+    -moz-transform: translateY(0%);
+    -o-transform: translateY(0%);
+    -ms-transform: translateY(0%);
+    transform: translateY(0%);
+  }
+ 
+  #st-control-2:checked ~ .st-scroll {
+    -webkit-transform: translateY(-100%);
+    -moz-transform: translateY(-100%);
+    -o-transform: translateY(-100%);
+    -ms-transform: translateY(-100%);
+    transform: translateY(-100%);
+  }
+  #st-control-3:checked ~ .st-scroll {
+    -webkit-transform: translateY(-200%);
+    -moz-transform: translateY(-200%);
+    -o-transform: translateY(-200%);
+    -ms-transform: translateY(-200%);
+    transform: translateY(-200%);
+  }
+  #st-control-4:checked ~ .st-scroll {
+    -webkit-transform: translateY(-300%);
+    -moz-transform: translateY(-300%);
+    -o-transform: translateY(-300%);
+    -ms-transform: translateY(-300%);
+    transform: translateY(-300%);
+  }
+  #st-control-5:checked ~ .st-scroll {
+    -webkit-transform: translateY(-400%);
+    -moz-transform: translateY(-400%);
+    -o-transform: translateY(-400%);
+    -ms-transform: translateY(-400%);
+    transform: translateY(-400%);
+  }
+
+
+  #st-control-1:checked ~ .st-scroll #st-panel-1 h2,
+  #st-control-2:checked ~ .st-scroll #st-panel-2 h2,
+  #st-control-3:checked ~ .st-scroll #st-panel-3 h2,
+  #st-control-4:checked ~ .st-scroll #st-panel-4 h2,
+  #st-control-5:checked ~ .st-scroll #st-panel-5 h2{
+    -webkit-animation: moveDown 0.6s ease-in-out 0.2s backwards;
+    -moz-animation: moveDown 0.6s ease-in-out 0.2s backwards;
+    -o-animation: moveDown 0.6s ease-in-out 0.2s backwards;
+    -ms-animation: moveDown 0.6s ease-in-out 0.2s backwards;
+    animation: moveDown 0.6s ease-in-out 0.2s backwards;
+  }
+
+
+
+  @-webkit-keyframes moveDown {
+    0% { 
+      -webkit-transform: translateY(-40px); 
+      opacity: 0;
+    }
+    100% { 
+      -webkit-transform: translateY(0px);  
+      opacity: 1;
+    }
+  }
+  
+  @-moz-keyframes moveDown {
+    0% { 
+      -moz-transform: translateY(-40px); 
+      opacity: 0;
+    }
+    100% { 
+      -moz-transform: translateY(0px);  
+      opacity: 1;
+    }
+  }
+  
+  @-o-keyframes moveDown{
+    0% { 
+      -o-transform: translateY(-40px); 
+      opacity: 0;
+    }
+    100% { 
+      -o-transform: translateY(0px);  
+      opacity: 1;
+    }
+  }
+  
+  @-ms-keyframes moveDown{
+    0% { 
+      -ms-transform: translateY(-40px); 
+      opacity: 0;
+    }
+    100% { 
+      -ms-transform: translateY(0px);  
+      opacity: 1;
+    }
+  }
+  
+  @keyframes moveDown{
+    0% { 
+      transform: translateY(-40px); 
+      opacity: 0;
+    }
+    100% { 
+      transform: translateY(0px);  
+      opacity: 1;
+    }
+  }

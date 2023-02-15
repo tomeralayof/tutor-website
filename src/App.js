@@ -1,8 +1,8 @@
 import React from 'react';
 import "./App.css"
 
-import { NavBar } from './components/navBar';
-import { Sections } from './components/sections';
+import { NavBar } from './components/nabBar/navBar';
+import { Sections } from "./components/sections/sections"
 
 const App = () => {
   return (
@@ -15,6 +15,6 @@ const App = () => {
       </div>
     </React.Fragment>
   );
-};
+}
 
 export default App;
