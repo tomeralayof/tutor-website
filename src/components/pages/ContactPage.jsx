@@ -1,14 +1,14 @@
 import React from "react";
 import { Header } from "../Common/header";
 import { ContactForm } from "../form/ContactForm";
-import {ContactIcons} from "../contactIcons/contactIcons"
+
+import "../../styles/pages/contact.css";
 
 export const ContactPage = () => {
     return (
         <React.Fragment>
-        <Header text={"צור קשר"}/>
+        <Header text={"צור קשר"}/>  
         <ContactForm/>
-        <ContactIcons/>
         </React.Fragment>
     )
 }

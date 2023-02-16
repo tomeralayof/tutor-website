@@ -6,7 +6,7 @@ export const ContactIcon = ({ icon }) => {
             <li>
                 <a href= {icon.link} >
                 {Array(4).fill(null).map((_, index) => <span key ={ index}></span>)}
-                    <span class={icon.icon}></span>
+                    <span className ={icon.icon}></span>
                 </a>
             </li> 
         </React.Fragment>
