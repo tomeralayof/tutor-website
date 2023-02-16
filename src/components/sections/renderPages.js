@@ -1,4 +1,4 @@
-import { Contact } from "../pages/contact";
+import { ContactPage } from "../pages/ContactPage";
 import { WelcomePage } from "../pages/welcomePage";
 
 const setupPage = (page,idx) => {
@@ -14,7 +14,7 @@ const setupPage = (page,idx) => {
 }
 
 export const RenderPages = () => {
-  const pages = [<Contact/>,<WelcomePage/>,<WelcomePage/>,<WelcomePage/>,<WelcomePage/>];
+  const pages = [<ContactPage/>,<WelcomePage/>,<WelcomePage/>,<WelcomePage/>,<WelcomePage/>];
   
   const renderResult = [];
   

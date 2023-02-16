@@ -160,7 +160,9 @@
     letter-spacing: 2px;
     font-size: 18px;
     width: 100%;
-    /* text-align: center; */
+     text-align: center;
+     left: 10px;
+     top: 30%;
   }
 
 

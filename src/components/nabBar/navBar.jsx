@@ -14,7 +14,8 @@ export const NavBar = () => {
         const labelArr = ["צור קשר","מאמרים", "? מה אני מלמד", " אני ואני מאמין", "ברוכים הבאים"];
 
         labelArr.map((elem,i) =>
-        optionSetter.push({id: `st-control-${i + 1}`, for : `st-panel-${i + 1}`, label : labelArr[i]}));
+        optionSetter.push({id: `st-control-${i + 1}`,
+                            for : `st-panel-${i + 1}`, label : labelArr[i]}));
         
         return optionSetter;
     }

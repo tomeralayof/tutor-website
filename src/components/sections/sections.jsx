@@ -11,7 +11,7 @@ export const Sections = () => {
     return (
         <div className = "st-scroll">
           {pages.map(page => (
-            <Section key={page.id} page = {page} />
+            <Section key = { page.id } page = {page} />
           ))}
         </div>
     )

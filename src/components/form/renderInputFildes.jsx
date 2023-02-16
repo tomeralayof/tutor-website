@@ -9,8 +9,11 @@ export const RenderInputFileds = ( { fields,handleInputChange,handleBtnClicked }
               <div key = {idx} className = { filed.divClass } >
               <Input filed = {filed} handleInputChange = { handleInputChange }
                  placeHolder = {filed.placeHolder} idx = { idx }/>
-              <Button filed = { filed } idx = { idx }
-                  lastIdx = { fields.length - 1 }  handleBtnClicked = { handleBtnClicked } />
+              <Button
+                filed = { filed } idx = { idx }
+                lastIdx = { fields.length - 1 }
+                handleBtnClicked = { handleBtnClicked }
+              />
               </div>
             )
           })

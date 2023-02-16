@@ -1,61 +1,92 @@
-import React, { useState } from "react"
+import React, { useState, useRef } from "react";
 
-import { InitFildes } from "./setupInputData"
+import  emailService  from "../../services/email/emailService.js";
+import  formValidatorService  from "../../services/form/formValidatorService.js";
+
+import { InitFildes } from "./setupInputData";
+
 import { RenderInputFileds } from "./renderInputFildes";
 
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-
-/* import { faWhatsapp } from '@fortawesome/free-brands-svg-icons' */
-
-
-import "../../styles/form/contactForm.css"
-import { SendMailToMyself } from "../emails/sendUserEmail";
+import "../../styles/form/contactForm.css";
 
 export const ContactForm = () => {
-  const googleClientId = process.env;
   const inputData = InitFildes();
-  const [fields, setFields] = React.useState(inputData);
+  const [fields,setFields] = React.useState(inputData);
   const [isSuccessMsg,setIsSuccessMsg] = useState(false);
+  const [successMsg,setSuccessMsg] = useState("");
 
-  
-  const handleInputChange = (e,index) => {
+  const form = useRef();
+
+  const { ValidateName, ValidateMsg ,ValidateIsraeliPhoneNumber } = formValidatorService;
+  const validators = [ValidateName, ValidateMsg, ValidateIsraeliPhoneNumber];
+
+  const handleInputChange = (e,idx) => {
+    const inputValue = e.target.value;
     const newState = [...fields];
-    newState[index].value = e.target.value;
+
+    newState[idx].isValid = validators[idx](inputValue) ? true : false;
+
     setFields(newState);
   }
   
-  const handleBtnClicked = (idx) => {
-    
+  const handleBtnClicked = (idx) => {  
     const newState = [...fields];
     newState[idx].divClass = `${newState[idx].divClass} fold-up`;
     setFields(newState);
     
     if (idx === fields.length - 1) {
-      setIsSuccessMsg(true);
+      handleSubmit();
     }
   }
-  
 
+  const handleSubmit = () => {
+    try {
+      setIsSuccessMsg(true);
+      /* emailService.SendUserMsg(form); */
+      setSuccessMsg("נשלח בהצלחה, אצור קשר בהקדם");
+    } catch(err) {
+      setSuccessMsg("הייתה בעיה בשליחת המייל, מוזמן לפנות אליי בלינק למטה")
+    }
+  };
+  
     return (
       <React.Fragment>
-
-      <div className="back registration-form">
+      <div className= "back registration-form">
       <header>
         <h1>מלא את הפרטים</h1>
       </header>
-      <form>
-        <RenderInputFileds fields = { fields } 
-                      handleInputChange = { handleInputChange }
-                      handleBtnClicked = { handleBtnClicked }
-                      />
-    </form>
+        <form ref = { form } >
+          <RenderInputFileds
+          fields = { fields }
+          handleInputChange = { handleInputChange }
+          handleBtnClicked = { handleBtnClicked }
+        />
+        </form>
 
-      <div className = {`${isSuccessMsg ? "success-msg" : "success"}`}>
-        <p>נשלח בהצלחה, אצור קשר בהקדם</p>
+       <div className = {`${isSuccessMsg ? "success-msg" : "success"}`}>
+        <p>{successMsg}</p>
       </div>
+  </div>
+
+  </React.Fragment>
+)
+}
 
 
-      <div className="con-icons">
+
+
+
+
+
+
+
+/* 
+
+
+console.log(form.current);
+
+
+<div className="con-icons">
       
 
       <button>hello</button>
@@ -63,8 +94,4 @@ export const ContactForm = () => {
       <button>hello</button>
       </div>
 
-  </div>
-
-  </React.Fragment>
-)
-}
+*/

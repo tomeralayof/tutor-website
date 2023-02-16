@@ -1,6 +1,6 @@
 import React from "react";
 
-export const Input = ({ filed ,handleInputChange, placeHolder,idx } ) => {
+export const Input = ({ filed ,handleInputChange,idx } ) => {
     return (
         <input
         onChange = {(e) => handleInputChange(e,idx)}
@@ -9,6 +9,7 @@ export const Input = ({ filed ,handleInputChange, placeHolder,idx } ) => {
         className = "email"
         style= {{ direction: "rtl" }}
         autoComplete = "given-name"
+        name = { filed.filedName }
       />
     )
 }
