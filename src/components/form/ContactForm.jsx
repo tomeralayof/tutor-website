@@ -7,9 +7,9 @@ import { InitFildes } from "./setupInputData";
 
 import { RenderInputFileds } from "./renderInputFildes";
 import { ContactIcons } from "../contactIcons/contactIcons.jsx";
+import { SuccessMessage } from "./SuccessMessage";
 
 import "../../styles/form/contactForm.css";
-import "../../styles/contactIcons/contactIcons.css"
 
 export const ContactForm = () => {
   const inputData = InitFildes();
@@ -54,10 +54,13 @@ export const ContactForm = () => {
     return (
       <React.Fragment>
       <div className= "back registration-form">
+
       <header>
         <h1>מלא את הפרטים</h1>
       </header>
-        <form ref = { form } >
+
+        <form 
+          ref = { form } >
           <RenderInputFileds
           fields = { fields }
           handleInputChange = { handleInputChange }
@@ -65,10 +68,8 @@ export const ContactForm = () => {
         />
         </form>
 
-       <div className = {`${isSuccessMsg ? "success-msg" : "success"}`}>
-        <p>{successMsg}</p>
-      </div>
-      <ContactIcons/>
+       <SuccessMessage isSuccessMsg = {isSuccessMsg} successMsg = {successMsg} />
+        <ContactIcons/>
 
   </div>
 
