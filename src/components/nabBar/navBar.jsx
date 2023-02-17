@@ -1,5 +1,7 @@
 import React, {useState} from "react";
 
+import "../../styles/navBar/navBar.css";
+
 export const NavBar = () => {
 
     const [selectedOption, setSelectedOption] = useState("st-control-5");

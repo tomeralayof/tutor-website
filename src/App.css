@@ -13,92 +13,8 @@
    left: 0;
    font-family: 'Josefin Slab', 'Myriad Pro', Arial, sans-serif;
  }
- 
- .st-container > input,
- .st-container > a {
-   position: fixed;
-   bottom: 0px;
-   width: 20%;
-   cursor: pointer;
-   font-size: 16px;
-   height: 34px;
-   line-height: 34px;
- }
- 
- .st-container > input {
-   opacity: 0;
-   z-index: 1000;
- }
- 
- .st-container > a {
-   z-index: 10;
-   font-weight: 700;
-   background: #e23a6e;
-   color: #fff;
-   text-align: center;
-   text-shadow: 1px 1px 1px rgba(151,24,64,0.2);
- }
- 
- /* "Fix" for percentage rounding: 
- add a background bar pseudo element with the same color like the labels */
- .st-container:before {
-   content: '';
-   position: fixed;
-   width: 100%;
-   height: 34px;
-   background: #e23a6e;
-   z-index: 9;
-   bottom: 0;
- }
- 
- #st-control-1, #st-control-1 + a {
-   left: 0;
- }
- 
- #st-control-2, #st-control-2 + a {
-   left: 20%;
- }
- 
- #st-control-3, #st-control-3 + a {
-   left: 40%;
- }
- 
- #st-control-4, #st-control-4 + a {
-   left: 60%;
- }
- 
- #st-control-5, #st-control-5 + a {
-   left: 80%;
- }
- 
- .st-container > input:checked + a,
- .st-container > input:checked:hover + a{
-   background: #821134;
- }
- 
- .st-container > input:checked + a:after,
- .st-container > input:checked:hover + a:after{
-   bottom: 100%;
-   border: solid transparent;
-   content: '';
-   height: 0;
-   width: 0;
-   position: absolute;
-   pointer-events: none;
-   border-bottom-color: #821134;
-   border-width: 20px;
-   left: 50%;
-   margin-left: -20px;
- }
- 
- .st-container > input:hover + a{
-   background: #AD244F;
- }
- 
- .st-container > input:hover + a:after {
-   border-bottom-color: #AD244F;
- }
- 
+
+ /* something else .... */
  .st-scroll,
  .st-panel {
    position: relative;
@@ -107,7 +23,6 @@
    
  }
  
-
  /* animation */
  .st-scroll {
    top: 0;
@@ -178,16 +93,17 @@
  }
  
   /* media */
- @media screen and (max-width: 520px) {
+ @media screen and (max-width: 600px) {
    .st-panel h2 {
-     font-size: 42px;
+     font-size: 2.5rem;
    }
    
-   .st-panel p {
+   /* .st-panel p {
+    border: 10px solid red;
      width: 90%;
      left: 5%;
      margin-top: 0;
-   }
+   } */
    
    .st-container > a {
      font-size: 13px;

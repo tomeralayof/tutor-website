@@ -81,3 +81,20 @@
   margin: 10px 0 0 0;
   -webkit-backface-visibility: hidden;
 }
+
+@media screen and (max-width: 600px) {
+  .st-panel p {
+    position: absolute;
+    text-align: center;
+    font-size: 1rem;
+    line-height: 22px;
+    color: #8b8b8b;
+    z-index: 2;
+    padding: 0;
+    width: 50%;
+    left: 25%;
+    top: 50%;
+    margin: 10px 0 0 0;
+    -webkit-backface-visibility: hidden;
+  }
+}
