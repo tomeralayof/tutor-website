@@ -95,7 +95,10 @@
   /* media */
  @media screen and (max-width: 600px) {
    .st-panel h2 {
-     font-size: 2.5rem;
+    font-size: 2.5rem;
+    /* white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis; */
    }
    
    /* .st-panel p {
@@ -109,9 +112,14 @@
      font-size: 13px;
    }
  }
- @media screen and (max-width: 360px) {
+ @media screen and (max-width: 450px) {
    .st-container > a {
      font-size: 10px;
+   }
+
+   .st-panel h2 {
+    border: 10px solid red;
+    font-size: 1.5rem;
    }
    
    .st-deco{
