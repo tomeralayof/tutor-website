@@ -1,5 +1,6 @@
-import { ContactPage } from "../pages/ContactPage";
 import { WelcomePage } from "../pages/welcomePage";
+import { About } from "../aboutContent/about";
+import { ContactPage } from "../pages/ContactPage";
 
 const setupPage = (page,idx) => {
   const cssClass = 'st-panel';
@@ -14,7 +15,7 @@ const setupPage = (page,idx) => {
 }
 
 export const RenderPages = () => {
-  const pages = [<ContactPage/>,<WelcomePage/>,<WelcomePage/>,<WelcomePage/>,<WelcomePage/>];
+  const pages = [<ContactPage/>,<WelcomePage/>,<WelcomePage/>,<About/>,<WelcomePage/>];
   
   const renderResult = [];
   
