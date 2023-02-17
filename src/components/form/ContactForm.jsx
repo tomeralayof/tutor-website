@@ -54,19 +54,19 @@ export const ContactForm = () => {
     return (
       <React.Fragment>
       <div className= "back registration-form">
-
+      
       <header>
         <h1>מלא את הפרטים</h1>
       </header>
 
-        <form 
-          ref = { form } >
-          <RenderInputFileds
-          fields = { fields }
-          handleInputChange = { handleInputChange }
-          handleBtnClicked = { handleBtnClicked }
-        />
-        </form>
+        {
+          !isSuccessMsg && (
+              <form ref = { form } >
+                <RenderInputFileds fields = { fields } handleInputChange = { handleInputChange } 
+                                  handleBtnClicked = { handleBtnClicked } />
+              </form>
+            )
+        }
 
        <SuccessMessage isSuccessMsg = {isSuccessMsg} successMsg = {successMsg} />
         <ContactIcons/>
