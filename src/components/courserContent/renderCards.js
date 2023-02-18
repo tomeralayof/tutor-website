@@ -22,8 +22,6 @@ const renderRow = (showCardsSameRow,cssRow) => {
 
 export const renderCards = ( numberOfCardsInRow ) => {
 
-    console.log(numberOfCardsInRow);
-
     let result = [];
 
     const numOfRows = Math.ceil(imageUrl.length / numberOfCardsInRow);
