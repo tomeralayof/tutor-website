@@ -136,8 +136,6 @@
 
  .content-container {
   position: relative;
-  top: 20%;
-
   display: flex;
  }
 
@@ -147,6 +145,7 @@
 
 @media screen and (max-width: 1000px) {
   .paragraph__text {
-    margin: 0 1rem;
+    margin: 0 0.17rem;
+    padding: 20px;
   }
 }
