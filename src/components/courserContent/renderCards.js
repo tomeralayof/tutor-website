@@ -20,15 +20,15 @@ const renderRow = (showCardsSameRow,cssRow) => {
     )
 }
 
-export const renderCards = () => {
+export const renderCards = ( numberOfCardsInRow ) => {
     let result = [];
-    
-    const numOfRows = Math.ceil(imageUrl.length / 3);
+
+    const numOfRows = Math.ceil(imageUrl.length / numberOfCardsInRow);
     let cssRow = "cards-container1";
     
     for (let i = 0; i < numOfRows; ++i) {
-        const startIdx = i * 3;
-        const endIdx = Math.min(startIdx + 3, imageUrl.length);
+        const startIdx = i * numberOfCardsInRow;
+        const endIdx = Math.min(startIdx + numberOfCardsInRow, imageUrl.length);
         const showCardsSameRow = renderSameRowCards(startIdx,endIdx);
         result.push(renderRow(showCardsSameRow,cssRow));
         cssRow = `${cssRow} ${cssRow}--bottom`;
