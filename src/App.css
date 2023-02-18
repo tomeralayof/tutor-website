@@ -1,3 +1,4 @@
+  
   @import url('//fonts.googleapis.com/css?family=Josefin+Slab:400,700');
  body {
    overflow: hidden;
@@ -14,13 +15,11 @@
    font-family: 'Josefin Slab', 'Myriad Pro', Arial, sans-serif;
  }
 
- /* something else .... */
  .st-scroll,
  .st-panel {
    position: relative;
    width: 100%;
-   height: 100%;
-   
+   height: 100%;   
  }
  
  /* animation */
@@ -96,18 +95,7 @@
  @media screen and (max-width: 600px) {
    .st-panel h2 {
     font-size: 2.5rem;
-    /* white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis; */
-   }
-   
-   /* .st-panel p {
-    border: 10px solid red;
-     width: 90%;
-     left: 5%;
-     margin-top: 0;
-   } */
-   
+   }   
    .st-container > a {
      font-size: 13px;
    }
@@ -136,3 +124,29 @@
      transform: rotate(-45deg) translateY(15%);
    }
  }
+
+
+ .nav-instraction-container {
+  height: 20%;
+  width: 60%;
+  position: relative;
+  top: 60%;
+  margin: 0 auto;
+ }
+
+ .content-container {
+  position: relative;
+  top: 20%;
+
+  display: flex;
+ }
+
+.paragraph__text {
+  margin: 0 2rem;
+}
+
+@media screen and (max-width: 1000px) {
+  .paragraph__text {
+    margin: 0 1rem;
+  }
+}

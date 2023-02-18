@@ -1,15 +1,7 @@
  /* Colored sections */
   .st-color,
  .st-deco {
-   /* background: #fa96b5; */
-   /* background: #2a1906c8; */
-
-   /* options */
-   /* background-color: #7F5A83; */
-   /* background-color:#3F0D12 */
     background-color :#753a88
-   
-
  }
  .st-color [data-icon]:after {
    color: #f13c76;
