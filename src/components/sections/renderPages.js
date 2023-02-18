@@ -1,5 +1,6 @@
 import { WelcomePage } from "../pages/welcomePage";
 import { About } from "../aboutContent/about";
+import { Courses } from "../courserContent/Courses";
 import { ContactPage } from "../pages/ContactPage";
 
 const setupPage = (page,idx) => {
@@ -15,7 +16,7 @@ const setupPage = (page,idx) => {
 }
 
 export const RenderPages = () => {
-  const pages = [<ContactPage/>,<WelcomePage/>,<WelcomePage/>,<About/>,<WelcomePage/>];
+  const pages = [<ContactPage/>,<WelcomePage/>,<Courses/>,<About/>,<WelcomePage/>];
   
   const renderResult = [];
   
