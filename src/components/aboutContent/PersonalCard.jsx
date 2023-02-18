@@ -6,7 +6,9 @@ export const PersonalCard = () => {
     return (
         <React.Fragment>
 
-        <div id="login-container">
+          <p>hello</p>
+
+      {/*   <div id="login-container">
   <div class="profile-img"></div>
   <h1>
    Tomer Alayof
@@ -50,7 +52,7 @@ export const PersonalCard = () => {
     מסע של אלף קילומטר מתחיל בצעד הראשון
   </div>
 </footer>
-</div>
+</div> */}
 
         </React.Fragment>
     )
