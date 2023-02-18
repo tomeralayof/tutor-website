@@ -3,7 +3,7 @@ import React from "react";
 import { contactIconsContent } from "./contactIconContent";
 import { ContactIcon } from "./ContactIcon";
 
-import "../../styles/contactIcons/contactIcons.css";
+import "../../../styles/contactIcons/contactIcons.css";
 
 export const ContactIcons = () => {
     return (

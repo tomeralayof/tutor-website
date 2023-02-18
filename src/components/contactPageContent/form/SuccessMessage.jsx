@@ -1,6 +1,6 @@
 import React from "react";
 
-import "../../styles/form/successMessage.css";
+import "../../../styles/form/successMessage.css";
 
 export const SuccessMessage = ({ isSuccessMsg, successMsg }) => {
 

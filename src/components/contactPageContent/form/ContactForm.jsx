@@ -1,7 +1,7 @@
 import React, { useState, useRef } from "react";
 
 /* import  emailService  from "../../services/email/emailService.js"; */
-import  formValidatorService  from "../../services/form/formValidatorService.js";
+import  formValidatorService  from "../../../services/form/formValidatorService.js";
 
 import { InitFildes } from "./setupInputData";
 
@@ -9,7 +9,7 @@ import { RenderInputFileds } from "./renderInputFildes";
 import { ContactIcons } from "../contactIcons/contactIcons.jsx";
 import { SuccessMessage } from "./SuccessMessage";
 
-import "../../styles/form/contactForm.css";
+import "../../../styles/form/contactForm.css";
 
 export const ContactForm = () => {
   const inputData = InitFildes();
@@ -70,7 +70,6 @@ export const ContactForm = () => {
 
        <SuccessMessage isSuccessMsg = {isSuccessMsg} successMsg = {successMsg} />
         <ContactIcons/>
-
   </div>
 
   </React.Fragment>
