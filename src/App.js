@@ -2,7 +2,7 @@ import React from 'react';
 import "./App.css"
 
 import { NavBar } from './components/nabBar/navBar';
-import { Sections } from "./components/sections/sections"
+import { Sections } from "./sections/sections"
 
 const App = () => {
   return (
