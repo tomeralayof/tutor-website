@@ -85,50 +85,6 @@
   border-bottom-color: #AD244F;
 }
 
-/* fix it ... */
-/* @media (max-width: 600px) {
-    .st-container {
-      height: 100%;
-    }
-
-    .st-container > input,
-        .st-container > a {
-        position: fixed;
-        bottom: 0px;
-        width: 20%;
-        cursor: pointer;
-        font-size: 16px;
-        height: 10%;
-        line-height: 34px;
-        }
-    
-    
-
-      #st-control-1, #st-control-1 + a {
-        left: 0;
-      }
-
-      #st-control-2, #st-control-2 + a {
-        left: 20%;
-      }
-
-      #st-control-3, #st-control-3 + a {
-        left: 40%;
-      }
-
-      #st-control-4, #st-control-4 + a {
-        left: 60%;
-      }
-
-      #st-control-5, #st-control-5 + a {
-        text-align: right;
-        font-size: 0.9rem;
-        left: 80%;
-      }
-  } */
-
-
-
   @media (max-width: 600px) {
     .st-container {
       height: 100%;
@@ -174,6 +130,62 @@
   
     #st-control-5, #st-control-5 + a {
       font-size: 0.75rem;
+      padding-top: 5%;
+      
+      left: 80%;
+    }
+  }
+
+
+
+
+
+
+  @media (max-width: 500px) {
+    .st-container {
+      height: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+  
+    .st-container > input,
+    .st-container > a {
+      position: fixed;
+      bottom: 0px;
+      width: 20%;
+      cursor: pointer;
+      font-size: 16px;
+      height: 10%;
+      line-height: 34px;
+    }
+  
+    #st-control-1, #st-control-1 + a {
+      font-size: 0.5rem;
+      padding-top: 5%;
+      left: 0;
+    }
+  
+    #st-control-2, #st-control-2 + a {
+      font-size: 0.5rem;
+      padding-top: 5%;
+      left: 20%;
+    }
+  
+    #st-control-3, #st-control-3 + a {
+      font-size: 0.5rem;
+      padding-top: 5%;
+      left: 40%;
+    }
+  
+    #st-control-4, #st-control-4 + a {
+      font-size: 0.5rem;
+      padding-top: 5%;
+      left: 60%;
+    }
+  
+    #st-control-5, #st-control-5 + a {
+      font-size: 0.5rem;
       padding-top: 5%;
       
       left: 80%;
