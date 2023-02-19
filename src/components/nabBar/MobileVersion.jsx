@@ -23,12 +23,11 @@ export const MobileVersion = ( {props} ) => {
     const handleTouchStart = useCallback((event) => {
         touchStartX.current = event.touches[0].clientX;
     }, []);
-
+    
+    // eslint-disable-next-line react-hooks/exhaustive-deps
     const handleTouchMove = useCallback(debounce((event) => {
         handleScreenSwapEvent(event, selectedOption, setSelectedOption, touchStartX);
       }, 100), [selectedOption, handleScreenSwapEvent, setSelectedOption, touchStartX]);
-
-      
 
     useEffect(() => {
         window.addEventListener("touchstart", handleTouchStart);
