@@ -11,10 +11,12 @@ const handleScreenSwapEvent = (event,selectedOption,setSelectedOption,touchStart
     const touchEndX = event.touches[0].clientX;
     const touchDiff = touchStartX.current - touchEndX;
 
-    const objParamToUpdateState = _initObjData(selectedOption,
-        setSelectedOption,_isSwapLeft,_isSwapRight,touchDiff);
-
-    _updateNewState(objParamToUpdateState);
+    setTimeout(() => {
+        const objParamToUpdateState = _initObjData(selectedOption,
+            setSelectedOption,_isSwapLeft,_isSwapRight,touchDiff);
+    
+        _updateNewState(objParamToUpdateState);
+    },5000);
 }
 
 const _updateNewState = (funcObj) => {
