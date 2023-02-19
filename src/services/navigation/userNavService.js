@@ -8,15 +8,13 @@ const handleKeyboardArrowEvent = (event,selectedOption,setSelectedOption) => {
 }
 
 const handleScreenSwapEvent = (event,selectedOption,setSelectedOption,touchStartX ) => {
-    const touchEndX = event.touches[0].clientX;
-    const touchDiff = touchStartX.current - touchEndX;
-
-    setTimeout(() => {
+        const touchEndX = event.touches[0].clientX;
+        const touchDiff = touchStartX.current - touchEndX;
+        console.log(touchDiff);
         const objParamToUpdateState = _initObjData(selectedOption,
             setSelectedOption,_isSwapLeft,_isSwapRight,touchDiff);
     
         _updateNewState(objParamToUpdateState);
-    },5000);
 }
 
 const _updateNewState = (funcObj) => {
@@ -25,11 +23,13 @@ const _updateNewState = (funcObj) => {
     const { decrementStrCharByIdx,incrementStrCharByIdx } = strService;
 
     if (condFunc1(param)) {
+        console.log("swap left ....");
         const updateNewOption = decrementStrCharByIdx(selectedOption,selectedOption.length - 1);
         setSelectedOption(updateNewOption);
     }
 
     else if (condFunc2(param)) {
+        console.log("swap right ....");
         const updateNewOption = incrementStrCharByIdx(selectedOption,selectedOption.length - 1);
         setSelectedOption(updateNewOption);
     }
@@ -54,11 +54,11 @@ const __isArrowRight = (event) => {
 }
 
 const _isSwapLeft = (touchDiff) => {
-    return touchDiff > 50;
+    return touchDiff > 0;
 }
 
 const _isSwapRight = (touchDiff) => {
-    return touchDiff < 50;
+    return touchDiff < 0;
 }
 
 const userNavService = {

@@ -6,15 +6,29 @@ export const MobileVersion = ( {props} ) => {
     const { selectedOption,handleChange,RenderNavbar,setSelectedOption } = props;
     const { handleScreenSwapEvent } = userNavService;
 
+    const  debounce = (func, delay) => {
+        let timerId;
+        return function (...args) {
+          if (timerId) {
+            clearTimeout(timerId);
+          }
+          timerId = setTimeout(() => {
+            func.apply(this, args);
+          }, delay);
+        };
+      }
+
     const touchStartX = useRef(0);
 
     const handleTouchStart = useCallback((event) => {
         touchStartX.current = event.touches[0].clientX;
     }, []);
 
-    const handleTouchMove = useCallback((event) => {
-        handleScreenSwapEvent(event,selectedOption,setSelectedOption,touchStartX);
-    }, [selectedOption,handleScreenSwapEvent,setSelectedOption]);
+    const handleTouchMove = useCallback(debounce((event) => {
+        handleScreenSwapEvent(event, selectedOption, setSelectedOption, touchStartX);
+      }, 100), [selectedOption, handleScreenSwapEvent, setSelectedOption, touchStartX]);
+
+      
 
     useEffect(() => {
         window.addEventListener("touchstart", handleTouchStart);
