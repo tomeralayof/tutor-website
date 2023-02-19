@@ -1,12 +1,12 @@
 import { Section } from "./section";
-import { RenderPages } from "./renderPages";
+import { PagesSetter } from "./pagesSetter";
 
 import "../styles/Section/sections.css";
 import "../styles/Section/sectionColor.css";
 
 export const Sections = () => {
 
-  const pages = RenderPages();
+  const pages = PagesSetter();
   
     return (
         <div className = "st-scroll">

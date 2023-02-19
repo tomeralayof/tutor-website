@@ -10,11 +10,23 @@ const handleKeyboardArrowEvent = (event,selectedOption,setSelectedOption) => {
 const handleScreenSwapEvent = (event,selectedOption,setSelectedOption,touchStartX ) => {
         const touchEndX = event.touches[0].clientX;
         const touchDiff = touchStartX.current - touchEndX;
-        console.log(touchDiff);
+        
         const objParamToUpdateState = _initObjData(selectedOption,
             setSelectedOption,_isSwapLeft,_isSwapRight,touchDiff);
     
         _updateNewState(objParamToUpdateState);
+}
+
+const  debounce = (func, delay) => {
+    let timerId;
+    return function (...args) {
+      if (timerId) {
+        clearTimeout(timerId);
+      }
+      timerId = setTimeout(() => {
+        func.apply(this, args);
+      }, delay);
+    };
 }
 
 const _updateNewState = (funcObj) => {
@@ -63,7 +75,8 @@ const _isSwapRight = (touchDiff) => {
 
 const userNavService = {
     handleKeyboardArrowEvent,
-    handleScreenSwapEvent
+    handleScreenSwapEvent,
+    debounce
 }
 
 export default userNavService;

@@ -8,7 +8,7 @@ export const DesktopVersion = ({props}) => {
 
     const handleKeyDown = useCallback((event) => {
       handleKeyboardArrowEvent(event, selectedOption, setSelectedOption);
-  }, [selectedOption, handleKeyboardArrowEvent ,setSelectedOption]);
+    }, [selectedOption, handleKeyboardArrowEvent ,setSelectedOption]);
 
     useEffect(()=> {
         document.addEventListener("keydown", handleKeyDown);

@@ -7,6 +7,7 @@ import { MobileVersion } from "./MobileVersion.jsx";
 import "../../styles/navBar/navBar.css";
 
 export const NavBar = () => {
+    
     const [selectedOption, setSelectedOption] = useState("st-control-5");
     const mediaQuery = window.matchMedia("(pointer: coarse)");
     const [ hasTouchScreen ] = useState(mediaQuery.matches);

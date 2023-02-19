@@ -15,7 +15,7 @@ const setupPage = (page,idx) => {
   }
 }
 
-export const RenderPages = () => {
+export const PagesSetter = () => {
   const pages = [<ContactPage/>,<WelcomePage/>,<Courses/>,<AboutPage/>,<WelcomePage/>];
   
   const renderResult = [];

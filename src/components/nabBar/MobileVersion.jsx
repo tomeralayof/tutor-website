@@ -4,25 +4,12 @@ import userNavService from "../../services/navigation/userNavService.js";
 
 export const MobileVersion = ( {props} ) => {
     const { selectedOption,handleChange,RenderNavbar,setSelectedOption } = props;
-    const { handleScreenSwapEvent } = userNavService;
-
-    const  debounce = (func, delay) => {
-        let timerId;
-        return function (...args) {
-          if (timerId) {
-            clearTimeout(timerId);
-          }
-          timerId = setTimeout(() => {
-            func.apply(this, args);
-          }, delay);
-        };
-      }
-
+    const { handleScreenSwapEvent,debounce } = userNavService;
     const touchStartX = useRef(0);
 
-    const handleTouchStart = useCallback((event) => {
+    const handleTouchStart = (event) => {
         touchStartX.current = event.touches[0].clientX;
-    }, []);
+    };
     
     // eslint-disable-next-line react-hooks/exhaustive-deps
     const handleTouchMove = useCallback(debounce((event) => {
