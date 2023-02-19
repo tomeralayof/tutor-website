@@ -1,30 +1,22 @@
-const ASCHII_KEY_LEFT = 37;
+import strService from "../string/strService.js";
 
-const handleUserNavigationLeft = ( currSectionId,setNewSection ) => {
-    
-    document.addEventListener("keydown", 
-                            (e) => _handleLeftRequest(e,currSectionId,setNewSection));
-    return () => {
-        document.removeEventListener("keydown", (e) => 
-                                    _handleLeftRequest(e,currSectionId,setNewSection));
+const handleKeyboardArrowEvent = (event,selectedOption,setSelectedOption) => {
+
+    const { decrementStrCharByIdx,incrementStrCharByIdx } = strService;
+
+    if (event.key === 'ArrowLeft') {
+        const updateNewOption = decrementStrCharByIdx(selectedOption,selectedOption.length - 1);
+        setSelectedOption(updateNewOption);
     }
-}
 
-const _setNewSection = (currSectionId) => {
-    let lastChar = currSectionId.charAt(currSectionId.length - 1);
-    lastChar = parseInt(lastChar) - 1;
-    return currSectionId.slice(0,-1) + lastChar;
-}
-
-const _handleLeftRequest = (event, currSectionId,setNewSection ) => {
-    if(event.keyCode === ASCHII_KEY_LEFT) {
-        const newSection = _setNewSection(currSectionId);
-        setNewSection(newSection);
+    else if (event.key === 'ArrowRight') {
+        const updateNewOption = incrementStrCharByIdx(selectedOption,selectedOption.length - 1);
+        setSelectedOption(updateNewOption);
     }
 }
 
 const userNavService = {
-    handleUserNavigationLeft
+    handleKeyboardArrowEvent
 }
 
 export default userNavService;

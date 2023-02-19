@@ -8,4 +8,3 @@ export const Section = ({ page }) => (
       {page.component}
     </section>
 );
-
