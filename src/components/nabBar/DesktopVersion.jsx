@@ -7,8 +7,8 @@ export const DesktopVersion = ({props}) => {
     const { handleKeyboardArrowEvent } = userNavService;
 
     const handleKeyDown = useCallback((event) => {
-        handleKeyboardArrowEvent(event,selectedOption,setSelectedOption);
-      }, [selectedOption,setSelectedOption,setSelectedOption]);
+      handleKeyboardArrowEvent(event, selectedOption, setSelectedOption);
+  }, [selectedOption, handleKeyboardArrowEvent ,setSelectedOption]);
 
     useEffect(()=> {
         document.addEventListener("keydown", handleKeyDown);

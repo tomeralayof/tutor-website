@@ -14,7 +14,7 @@ export const MobileVersion = ( {props} ) => {
 
     const handleTouchMove = useCallback((event) => {
         handleScreenSwapEvent(event,selectedOption,setSelectedOption,touchStartX);
-    }, [selectedOption]);
+    }, [selectedOption,handleScreenSwapEvent,setSelectedOption]);
 
     useEffect(() => {
         window.addEventListener("touchstart", handleTouchStart);
