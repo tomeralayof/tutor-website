@@ -1,4 +1,4 @@
-import React, {useEffect, useCallback } from "react";
+import {useEffect, useCallback } from "react";
 
 import userNavService from "../../services/navigation/userNavService.js";
 
@@ -8,7 +8,7 @@ export const DesktopVersion = ({props}) => {
 
     const handleKeyDown = useCallback((event) => {
         handleKeyboardArrowEvent(event,selectedOption,setSelectedOption);
-      }, [selectedOption]);
+      }, [selectedOption,setSelectedOption,setSelectedOption]);
 
     useEffect(()=> {
         document.addEventListener("keydown", handleKeyDown);
