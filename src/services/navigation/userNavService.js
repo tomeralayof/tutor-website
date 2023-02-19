@@ -54,11 +54,11 @@ const __isArrowRight = (event) => {
 }
 
 const _isSwapLeft = (touchDiff) => {
-    return touchDiff > 0;
+    return touchDiff < 0;
 }
 
 const _isSwapRight = (touchDiff) => {
-    return touchDiff < 0;
+    return touchDiff > 0;
 }
 
 const userNavService = {
