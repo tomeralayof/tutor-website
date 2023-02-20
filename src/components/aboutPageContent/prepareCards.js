@@ -5,7 +5,7 @@ export const PrepareCards = () => {
     let cardsPreparedToRender = [];
     
     setupCardsContent().forEach((cardContent) =>
-      cardsPreparedToRender.push(
+      cardsPreparedToRender.push (
         <AboutCard { ...cardContent } key = { cardContent.cardNameHeader } />
       )
     );

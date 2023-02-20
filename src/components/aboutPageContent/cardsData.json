@@ -1,15 +1,15 @@
 [
-    {
-        "header" : "https://randomuser.me/api/portraits/men/3.jpg",
+    {  
+        "header" : "https://scontent.fsdv1-2.fna.fbcdn.net/v/t1.6435-9/67200325_2326514450771751_6891690345474555904_n.jpg?_nc_cat=103&ccb=1-7&_nc_sid=174925&_nc_ohc=jj6EYHvhtOUAX9uq2vC&tn=3gK8ZleydQWnaDJl&_nc_ht=scontent.fsdv1-2.fna&oh=00_AfAYtodcu9hNKJVQqIQjA3QMW1sOxkkhhj38vQIEh7MD9w&oe=641B118E",
         "cardNameHeader" : "תומר עליוף",
-        "paragraph" : "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Incidunt aperiam possimus ex. Quae fugiat placeat minus officiis, possimus, autem mollitia laudantium exercitationem ",
+        "paragraph" : "  מורה פרטי לתכנות בעל תואר שני מטעם בר אילן. בעל ידע רב, מיומן בחינוך תלמידים.",
         "icons" : ["fa fa-whatsapp","fa fa-whatsapp","fa fa-envelope"]
     },
 
     {
         "header" : null,
         "cardNameHeader" : "ליווי אישי",
-        "paragraph" : "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Incidunt aperiam possimus ex. Quae fugiat placeat minus officiis, possimus, autem mollitia laudantium exercitationem ",
+        "paragraph" : " ליווי מותאם לתלמיד לפי רמתו , העונה על הצרכים והדרישות הייחודיים שלו, מה שמבטיח אווירה טובה של למידה בשיעור ",
         "icons" : null
     },
 

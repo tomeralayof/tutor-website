@@ -1,11 +1,14 @@
 .card-two {
-    border: 3px solid red;
-    position: relative;
-    width: 300px;
-    background: #fff;
-    box-shadow: 0 10px 7px -5px rgba(0, 0, 0, 0.4);
-  }
-  
+  background: #fff;
+  box-shadow: 0 10px 7px -5px rgba(0, 0, 0, 0.4);
+   /* border: 3px solid red; */
+  height: 100%;
+  position: relative;
+  width: 300px;
+  background: #fff;
+  box-shadow: 0 10px 7px -5px rgba(0, 0, 0, 0.4);
+}
+
   .card-two header {
     position: relative;
     width: 100%;
@@ -23,6 +26,8 @@
     transform: skewY(8deg);
     transform-origin: 0 100%;
   }
+
+  /* fix it ... */
   .card-two header .avatar {
     position: absolute;
     left: 50%;
@@ -44,11 +49,16 @@
     width: 100px;
     height: auto;
   }
+  /*  */
+
+
   .card-two h3 {
     position: relative;
     margin: 80px 0 30px;
     text-align: center;
   }
+
+  /* check about it .... */
   .card-two h3::after {
     content: "";
     position: absolute;
@@ -59,6 +69,8 @@
     height: 1px;
     background: #000;
   }
+
+
   .card-two .desc {
     padding: 0 1rem 2rem;
     text-align: center;
@@ -96,9 +108,11 @@
     border: 2px solid #c8c;
     border-radius: 50%;
   }
+  
   .card-two .contacts a .fa:before {
     position: relative;
     z-index: 1;
+    
   }
   .card-two .contacts a .fa::after {
     content: "";

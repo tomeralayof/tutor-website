@@ -1,16 +1,16 @@
-import React from "react";
+import React, { useState } from "react";
 
 import "../../styles/about/info.css";
 
 const renderIcons = ( contacts ) => {
-  console.log(contacts);
     return contacts.map((contact, index) => (
-        <a key = {index} href="#"><i className = {`fa ${contact.icon}`}></i></a>
+        <a key = {index} href = "google.http"><i class = {contact}></i></a>
     ));
 }
 
 export const AboutCard = ( props ) => {
-  console.log("the props are = ",props);
+  const [ scrrenSize ] = useState(window.innerWidth);
+
     return (
         <div className = "card card-two">
         <header>
@@ -25,8 +25,12 @@ export const AboutCard = ( props ) => {
             {props.icons != null ? renderIcons(props.icons) : null}
           <div className = "clear"></div>
         </div>
-        <footer>
-        </footer>
+         {
+          scrrenSize >= 760 && (
+              <footer>
+              </footer>
+          )
+         }
       </div>
     )
 }

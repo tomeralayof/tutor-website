@@ -16,41 +16,85 @@
 
   /*** CARD STLES ***/
   .cards-container {
-    border: 10px solid red;
-    display: flex;
+    /* border: 10px solid red; */
     position: relative;
     top: 20%;
     justify-content: center;
     align-items: center;
-    flex-wrap: wrap;
     margin-bottom: 2%;
+    display: flex;
+    flex-wrap: wrap;
   }
   
   .card {
-    
     margin: 3rem;
   }
 
-  /* personal card 2 */
-  
 
-  
-  /*** RESPONSIVE ***/
-  @media only screen and (max-width: 810px) {
-    .card {
-      float: none;
-      margin-left: auto;
-      margin-right: auto;
+
+  @media only screen and (max-width: 760px) {
+    .cards-container {
+      top: 10%;
+      flex-direction: column;
     }
-  }
-
   
-/*
-    .cards-container1 {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-wrap: wrap;
-    margin-bottom: 2%;
+    .card {
+      width: 80%;
+      margin: 0.5rem auto;
+      height: 23vh;
+    }
+
+    .card-two header {
+      position: relative;
+      width: 100%;
+      height: 3vh;
+      background-color: #c8c;
+    }
+
+    .card-two header::after {
+      transform: skewY(4deg);
+    }
+
+    .card-two h3 {
+      font-size: 0.8rem;
+    }
+
+    /* fix the avatar later.... */
+    .card-two header .avatar {
+      position: absolute;
+      left: 50%;
+      top: 0.00vh;
+      margin-left: -30px;
+      z-index: 5;
+      width: 50px; /* fix it later */
+      height: 50px;
+      border-radius: 50%;
+      overflow: hidden;
+      background: #ccc;
+      border: 3px solid #fff;
+    }
+
+    .card-two h3 {
+      position: relative;
+      margin: 4vh 0 3vh;
+      text-align: center;
+    }
+
+    .card-two .desc {
+      font-size: 0.6rem;
+      padding: 0 1rem ;
+    }
+
+
+    .card-two h3::after {
+      content: "";
+      position: absolute;
+      bottom: -10px;
+      left: 50%;
+      margin-left: -15px;
+      width: 30px;
+      height: 1px;
+      background: #000;
+    }
+
   }
-*/

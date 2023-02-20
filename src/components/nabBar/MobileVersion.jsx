@@ -11,9 +11,9 @@ export const MobileVersion = ( {props} ) => {
     const { handleScreenSwapEvent } = userNavService;
     const { debounce } = utils;
 
-    const handleTouchStart = (event) => {
+    const handleTouchStart = useCallback((event) => {
         touchStartX.current = event.touches[0].clientX;
-    };
+    },[]);
     
     // eslint-disable-next-line react-hooks/exhaustive-deps
     const handleTouchMove = useCallback(debounce((event) => {
