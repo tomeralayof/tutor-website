@@ -16,7 +16,7 @@
 
   /*** CARD STLES ***/
   .cards-container {
-    /* border: 10px solid red; */
+     border: 10px solid red;
     position: relative;
     top: 20%;
     justify-content: center;
@@ -51,9 +51,12 @@
       background-color: #c8c;
     }
 
-    .card-two header::after {
+     .card-two header::after {
       transform: skewY(4deg);
+      
     }
+
+    
 
     .card-two h3 {
       font-size: 0.8rem;
@@ -96,5 +99,30 @@
       height: 1px;
       background: #000;
     }
+
+    .card-two .contacts a .fa {
+      position: relative;
+      width: 7vw;
+      height: 4vh;
+      line-height: 46px;
+      overflow: hidden;
+      text-align: center;
+      border: 2px solid #c8c;
+      border-radius: 50%;
+    }
+
+  }
+
+  @media only screen and (max-width: 500px) {
+    .cards-container {
+      top: 12%;
+    }
+
+    .card {
+      width: 80%;
+      margin: 0.2rem auto;
+      height: 23vh;
+    }
+
 
   }
