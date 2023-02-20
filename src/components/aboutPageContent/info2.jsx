@@ -22,5 +22,4 @@ export const Info2 = () => {
         </footer>
       </div>
     )
-
 }

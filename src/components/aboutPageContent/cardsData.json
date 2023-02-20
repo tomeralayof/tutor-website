@@ -1,0 +1,22 @@
+[
+    {
+        "header" : "https://randomuser.me/api/portraits/men/3.jpg",
+        "cardNameHeader" : "תומר עליוף",
+        "paragraph" : "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Incidunt aperiam possimus ex. Quae fugiat placeat minus officiis, possimus, autem mollitia laudantium exercitationem ",
+        "icons" : ["fa fa-whatsapp","fa fa-whatsapp","fa fa-envelope"]
+    },
+
+    {
+        "header" : null,
+        "cardNameHeader" : "ליווי אישי",
+        "paragraph" : "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Incidunt aperiam possimus ex. Quae fugiat placeat minus officiis, possimus, autem mollitia laudantium exercitationem ",
+        "icons" : null
+    },
+
+    {
+        "header" : null,
+        "cardNameHeader" : "הבנת צורכי התלמיד",
+        "paragraph" : "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Incidunt aperiam possimus ex. Quae fugiat placeat minus officiis, possimus, autem mollitia laudantium exercitationem ",
+        "icons" : null
+    }
+]
