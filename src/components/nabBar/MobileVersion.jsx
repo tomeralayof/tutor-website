@@ -4,11 +4,12 @@ import userNavService from "../../services/navigation/userNavService.js";
 import utils from "../../services/utils.js";
 
 export const MobileVersion = ( {props} ) => {
+
+    const touchStartX = useRef(0);
+
     const { selectedOption,handleChange,RenderNavbar,setSelectedOption } = props;
     const { handleScreenSwapEvent } = userNavService;
     const { debounce } = utils;
-
-    const touchStartX = useRef(0);
 
     const handleTouchStart = (event) => {
         touchStartX.current = event.touches[0].clientX;

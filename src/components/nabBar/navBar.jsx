@@ -18,5 +18,5 @@ export const NavBar = () => {
 
     const props = { selectedOption, handleChange, RenderNavbar, setSelectedOption }
     
-    return !hasTouchScreen ? <DesktopVersion props = {props}/> : <MobileVersion props = {props}/>;
+    return !hasTouchScreen ? <DesktopVersion props = {props}/> : <MobileVersion props = {props}/>
 }

@@ -1,6 +1,10 @@
 import  strService  from "../string/strService.js";
+import   navConfig   from "./navConfig.json";
 
-const setupStateData = ( currState,setOption,firstEventDecidor,secondEventDecidor,param) => {
+const { navLength } = navConfig;
+
+const getStateUpdateParameters = ( currState,setOption,firstEventDecidor,secondEventDecidor,param) => {
+
     return {
         "currState" : currState,
         "setCurrState" : setOption,
@@ -15,18 +19,18 @@ const updateNewState = ( state ) => {
     const { decrementStrCharByIdx,incrementStrCharByIdx } = strService;
 
     if (firstEventDecidor(param)) {
-        const decrementStateId = decrementStrCharByIdx(currState,currState.length - 1);
+        const decrementStateId = decrementStrCharByIdx(currState,currState.length - 1,navLength);
         setCurrState(decrementStateId);
     }
 
     else if (secondEventDecidor(param)) {
-        const incrementStateId = incrementStrCharByIdx(currState,currState.length - 1);
+        const incrementStateId = incrementStrCharByIdx(currState,currState.length - 1,navLength);
         setCurrState(incrementStateId);
     }
 }
 
 const stateUpdatorService = {
-    setupStateData,
+    getStateUpdateParameters,
     updateNewState
 }
 

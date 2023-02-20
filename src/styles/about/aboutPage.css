@@ -1,0 +1,43 @@
+/*** VARS ***/
+/*** GENERAL STYLES ***/
+* {
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: "Dosis", sans-serif;
+    background: #c5cae9;
+    text-align: center;
+  }
+  
+  .clear {
+    clear: both;
+  }
+  
+  /*** CARD STLES ***/
+  .cards-container {
+    border: 10px solid red;
+    width: 90%;
+    position: relative;
+    top: 20%;
+    max-width: 100%;
+    margin: 2rem auto;
+  }
+  
+  .card {
+    float: left;
+    margin: 3rem;
+  }
+
+  /* personal card 2 */
+  
+
+  
+  /*** RESPONSIVE ***/
+  @media only screen and (max-width: 810px) {
+    .card {
+      float: none;
+      margin-left: auto;
+      margin-right: auto;
+    }
+  }

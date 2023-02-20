@@ -1,23 +1,19 @@
-const decrementStrCharByIdx = (str,idx) => {
-    return _handleStrValCounter(str,idx,_decrementCount);
+import  intService  from "../int/intService.js";
+
+const { cycleDecrement,cycleIncrement }  = intService;
+
+const decrementStrCharByIdx = (str,idx,cycleLimit) => {
+    return updateCharAtIdx(str,idx,cycleDecrement,cycleLimit);
 }
 
-const incrementStrCharByIdx = (str,idx) => {
-    return _handleStrValCounter(str,idx,_incrementCount);
+const incrementStrCharByIdx = (str,idx,cycleLimit) => {
+    return updateCharAtIdx(str,idx,cycleIncrement,cycleLimit);
 }
 
-const _handleStrValCounter = (str,idx,cb) => {
+const updateCharAtIdx = (str,idx,updateChar,cycleLimit) => {
     let chatAtIdx = parseInt(str.charAt(idx));
-    chatAtIdx = cb(chatAtIdx);
+    chatAtIdx = updateChar(chatAtIdx,cycleLimit);
     return str.slice(0,idx) + chatAtIdx + str.slice(idx + 1,str.length);
-}
-
-const _decrementCount = (num) => {
-    return num - 1 || 5;
-}
-
-const _incrementCount = (num) => {
-    return (num + 1) % 5 || 5;
 }
 
 const strService = {
