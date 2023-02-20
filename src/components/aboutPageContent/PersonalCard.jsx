@@ -4,7 +4,7 @@ import "../../styles/about/personalCard.css";
 
 export const PersonalCard = () => {
     return (
-      <div class="card card-one">
+      <div class="card card-two">
         <header>
           <div class="avatar">
             <img src = "https://randomuser.me/api/portraits/men/3.jpg" alt="Jhon Doe" />
