@@ -1,10 +1,13 @@
 import { useCallback, useRef , useEffect } from "react";
 
 import userNavService from "../../services/navigation/userNavService.js";
+import utils from "../../services/utils.js";
 
 export const MobileVersion = ( {props} ) => {
     const { selectedOption,handleChange,RenderNavbar,setSelectedOption } = props;
-    const { handleScreenSwapEvent,debounce } = userNavService;
+    const { handleScreenSwapEvent } = userNavService;
+    const { debounce } = utils;
+
     const touchStartX = useRef(0);
 
     const handleTouchStart = (event) => {
