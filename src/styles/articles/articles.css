@@ -168,7 +168,7 @@
 
   @media (max-width: 1200px) {
     .animation {
-      border: 10px solid black;
+      /* border: 10px solid black; */
     }
 
     .article-paragraph {
