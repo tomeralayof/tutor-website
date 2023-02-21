@@ -3,6 +3,7 @@ import { AboutPage } from "../pages/AboutPage";
 import { Courses } from "../pages/CoursesPage";
 import { ArticlesPage } from "../pages/ArticlePage";
 import { ContactPage } from "../pages/ContactPage";
+import { ArticlesTest } from "../tests/articlesTest";
 
 const setupPage = (page,idx) => {
   const cssClass = 'st-panel';
@@ -17,7 +18,7 @@ const setupPage = (page,idx) => {
 }
 
 export const PagesSetter = () => {
-  const pages = [<ContactPage/>,<ArticlesPage/>,<Courses/>,<AboutPage/>,<WelcomePage/>];
+  const pages = [<ContactPage/>,<ArticlesTest/>,<Courses/>,<AboutPage/>,<WelcomePage/>];
   
   const renderResult = [];
   

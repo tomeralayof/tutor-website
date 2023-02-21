@@ -1,71 +1,94 @@
-import React, { useState } from "react";
+import React, { useCallback, useEffect, useState } from "react";
+import articleSource from "./data.json";
 
 import "../../styles/articles/articles.css";
 import "../../styles/about/info.css";
 
 export const Articles = () => {
-  const [isClicked, setIsClicked] = useState(false);
+  const [idxArticle, setIdxArticle] = useState(0);
+  const [articleTextAnimation, setArticleTextAnimation] = useState("article-title");
+  const [isAnimationDone, setIsAnimationDone] = useState(false);
+  const [jsonArticles] = useState(articleSource);
+  const [isAnimationLeft,setIsAnimationLeft] = useState(true);
 
-  const handleClick = () => {
-    setIsClicked(true);
+  const handleAnimationRendering = (moveAnimation, newArticleIdx) => {
+      setIdxArticle(newArticleIdx);
+      setArticleTextAnimation("article-title");
+      let nextAnimation = articleTextAnimation.concat(" ",moveAnimation);
+      setArticleTextAnimation(nextAnimation);
+      setIsAnimationDone(true);
+  }
+
+  const setupInitialState = useCallback(() => {
+    console.log("number of times the function called ....");
+
+    if(isAnimationLeft) {
+      handleAnimationRendering("move-next", idxArticle + 1);
+    }
+    else {
+      console.log("decrement ...");
+    }
+  
+  },[idxArticle,isAnimationLeft]);
+
+
+  useEffect(() => {
+    const animatedElement = document.querySelector(".article-title");
+    animatedElement.addEventListener("animationend", setupInitialState);
+
+    return () => {
+      animatedElement.removeEventListener("animationend", setupInitialState);
+    };
+  }, [setupInitialState]);
+
+
+  useEffect(()=> {
+    if(isAnimationDone) {
+      let doneAnimation = articleTextAnimation.concat(" ", "article-title");
+      setArticleTextAnimation(doneAnimation);
+      setIsAnimationDone(false);
+    }
+  },[isAnimationDone]);
+
+
+  const handleLeftClick = () => {
+    console.log("left clicked ...");
   };
-
+  
+  const handleRightClick = () => {
+    console.log("right click ...")
+    let moveLeftAnimation = articleTextAnimation.concat(" ","move-left");
+    setArticleTextAnimation(moveLeftAnimation);
+  }
+  
   return (
-    <div className="article-container">
-      <h3 className = {`article-title ${isClicked ? "move-left" : "" }` } >Title of Six Words</h3>
-      <h6 className = {`paragraph-title ${isClicked ? "move-left" : "" }` } > 
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis auctor
-        magna quis justo hendrerit eleifend. Nullam vel aliquet libero. Nam at
-        mauris eu odio viverra ullamcorper sed in lectus. Proin ac justo nec nisi
-        placerat pellentesque non non urna. Lorem ipsum dolor sit amet,
-        consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
-        et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
-        exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis
-        aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu
-        fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident,
-        sunt in culpa qui officia deserunt mollit anim id est laborum.
+    <div className = "article-container">
+
+      <h3 className = { articleTextAnimation } >
+        {jsonArticles[idxArticle].header}
+      </h3>
+
+      <h6 className = "article-paragraph">
+        { jsonArticles[idxArticle].paragraph}
       </h6>
 
-      <button onClick={ handleClick }>Click</button>
+      <div className="button-container">
+        <button className="left-button" onClick = { handleLeftClick }>
+          Click
+        </button>
+        <button className = "right-button" onClick = { handleRightClick }>
+          Click
+        </button>
+      </div>
 
       <footer className="article-footer">
         <div className="article-footer-text">
-          <p>1 / 3</p>
+          <p className="article-footer-paragraph"> { idxArticle + 1 } / 3</p>
         </div>
       </footer>
     </div>
   );
 };
 
-/* 
-const moveElements = () => {
-    const title = document.querySelector(".article-title");
-    const paragraph = document.querySelector(".paragraph");
-    const container = document.querySelector(".article-container");
-
-    if (!title || !paragraph || !container) return;
-
-    const containerWidth = container.clientWidth;
-    const titleWidth = title.clientWidth;
-    const paragraphWidth = paragraph.clientWidth;
-    const totalWidth = titleWidth + paragraphWidth;
-
-    const distance = containerWidth - totalWidth;
-    const animationDuration = 1000;
-
-    title.style.transition = `transform ${animationDuration}ms`;
-    paragraph.style.transition = `transform ${animationDuration}ms`;
-
-    setTimeout(() => {
-      title.style.transform = `translateX(${distance}px)`;
-      paragraph.style.transform = `translateX(${distance}px)`;
-
-      setTimeout(() => {
-        title.style.display = "none";
-        paragraph.style.display = "none";
-      }, animationDuration);
-    }, 1000);
-  };
 
 
-*/

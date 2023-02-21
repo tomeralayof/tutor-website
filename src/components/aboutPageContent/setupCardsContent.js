@@ -1,4 +1,4 @@
-import   cardsSetter  from "./cardsData.json";
+import cardsSetter from "./cardsData.json";
 
 const setUpCardData = (card) => {
     return {

@@ -1,10 +1,15 @@
+@import url('https://fonts.googleapis.com/css2?family=Yellowtail&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@900&display=swap');
+
 .article-container {
+    
+    background-color: rgb(253, 238, 238);
     width: 90%;
-    max-width: 900px;
+    max-width: 950px;
     margin: 0 auto;
     position: relative;
     text-align: center;
-    top: 20%;
+    top: 15%;
     height: 70%;
     border: 1px solid black;
     /* padding: 4rem; */
@@ -14,6 +19,7 @@
 }
 
 .article-title {
+  position: relative;  
     font-size: 24px;
     font-weight: bold;
     margin-top: 20px;
@@ -63,13 +69,7 @@
     transition: transform 0.5s ease 0.1s;
   }
   
-
-  .article-paragraph {
-    text-align: justify;
-    margin-top: 20px;
-    transition: transform 0.5s ease 0.1s;
-  }
-
+  /* move left animation. */
   .move-left {
     transform: translateX(-50px);
     opacity: 1;
@@ -88,5 +88,97 @@
     100% {
       transform: translateX(-100%);
       opacity: 0;
+    }
+  }
+
+
+
+  .button-container {
+    border: 1px solid red;
+    height: 10%;
+    position: relative;
+    width: 30%;
+    top: 2%;
+    left: 30%;
+  }
+
+  .left-button {
+    float: left;
+    margin: 10px;
+  }
+  .right-button {
+    margin: 10px;
+    float: right;
+  }
+
+  
+  
+ 
+
+  .article-footer-text {
+    position: relative;
+  }
+  
+  .article-footer-paragraph {
+    color: white !important;
+  }
+
+  .article-paragraph {
+    font-size: 0.8rem;
+    letter-spacing: 1px;
+    direction: rtl;
+  }
+  
+  .article-paragraph {
+    font-family: 'Montserrat', sans-serif;
+    /* font-family: 'Yellowtail', cursive; */
+    font-weight: 500;
+    text-align: justify;
+    margin-top: 20px;
+    transition: transform 0.5s ease 0.1s;
+    text-align: justify;
+    
+    z-index: 2;
+    font-weight: normal;
+  }
+
+  .paragraph-container {
+    padding: 10px;
+  }
+
+  .animation {
+    border: 1px solid red;
+  }
+
+  .move-next {
+    transform: translateX(50px);
+    opacity: 0;
+    animation: move-next-animation 1s forwards;
+  }
+
+  @keyframes move-next-animation {
+    0% {
+      transform: translateX(0);
+      opacity: 0;
+    }
+    50% {
+      transform: translateX(100%);
+      opacity: 0.5;
+    }
+    100% {
+      transform: translateX(0);
+      opacity: 1;
+    }
+  }
+
+  @media (max-width: 1200px) {
+    .animation {
+      border: 10px solid black;
+    }
+
+    .article-paragraph {
+      font-size: 0.7rem;
+      letter-spacing: 0.6px;
+      direction: rtl;
     }
   }
