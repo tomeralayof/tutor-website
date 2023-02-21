@@ -16,7 +16,7 @@
 
   /*** CARD STLES ***/
   .cards-container {
-     border: 10px solid red;
+     /* border: 10px solid red; */
     position: relative;
     top: 20%;
     justify-content: center;
@@ -55,8 +55,6 @@
       transform: skewY(4deg);
       
     }
-
-    
 
     .card-two h3 {
       font-size: 0.8rem;
@@ -113,7 +111,8 @@
 
   }
 
-  @media only screen and (max-width: 500px) {
+  @media only screen and (max-width: 560px) {
+     
     .cards-container {
       top: 12%;
     }
@@ -123,6 +122,4 @@
       margin: 0.2rem auto;
       height: 23vh;
     }
-
-
   }

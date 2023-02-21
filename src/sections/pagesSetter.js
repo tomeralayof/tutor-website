@@ -1,6 +1,7 @@
 import { WelcomePage } from "../pages/welcomePage";
 import { AboutPage } from "../pages/AboutPage";
 import { Courses } from "../pages/CoursesPage";
+import { ArticlesPage } from "../pages/ArticlePage";
 import { ContactPage } from "../pages/ContactPage";
 
 const setupPage = (page,idx) => {
@@ -16,7 +17,7 @@ const setupPage = (page,idx) => {
 }
 
 export const PagesSetter = () => {
-  const pages = [<ContactPage/>,<WelcomePage/>,<Courses/>,<AboutPage/>,<WelcomePage/>];
+  const pages = [<ContactPage/>,<ArticlesPage/>,<Courses/>,<AboutPage/>,<WelcomePage/>];
   
   const renderResult = [];
   

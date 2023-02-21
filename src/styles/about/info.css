@@ -112,7 +112,6 @@
   .card-two .contacts a .fa:before {
     position: relative;
     z-index: 1;
-    
   }
   .card-two .contacts a .fa::after {
     content: "";
