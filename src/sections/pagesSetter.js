@@ -1,7 +1,7 @@
 import { WelcomePage } from "../pages/welcomePage";
 import { AboutPage } from "../pages/AboutPage";
 import { Courses } from "../pages/CoursesPage";
-import { ArticlesPage } from "../pages/ArticlePage";
+/* import { ArticlesPage } from "../pages/ArticlePage"; */
 import { ContactPage } from "../pages/ContactPage";
 import { ArticlesTest } from "../tests/articlesTest";
 

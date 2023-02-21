@@ -1,4 +1,4 @@
-import React, { useCallback, useEffect, useState } from "react";
+import React, { useCallback, useState } from "react";
 import articleSource from "../components/articlesContent/data.json";
 
 import "../styles/articles/articles.css";
@@ -44,7 +44,6 @@ const handleRightClick = () => {
 
   return (
     <div className="article-container">
-
 
         <div className = { articleTextAnimation }>
 

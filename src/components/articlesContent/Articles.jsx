@@ -1,4 +1,4 @@
-import React, { useCallback, useEffect, useState } from "react";
+/* import React, { useCallback, useEffect, useState } from "react";
 import articleSource from "./data.json";
 
 import "../../styles/articles/articles.css";
@@ -9,7 +9,7 @@ export const Articles = () => {
   const [articleTextAnimation, setArticleTextAnimation] = useState("article-title");
   const [isAnimationDone, setIsAnimationDone] = useState(false);
   const [jsonArticles] = useState(articleSource);
-  const [isAnimationLeft,setIsAnimationLeft] = useState(true);
+  const [isAnimationLeft] = useState(true);
 
   const handleAnimationRendering = (moveAnimation, newArticleIdx) => {
       setIdxArticle(newArticleIdx);
@@ -29,7 +29,7 @@ export const Articles = () => {
       console.log("decrement ...");
     }
   
-  },[idxArticle,isAnimationLeft]);
+  },[idxArticle,isAnimationLeft,handleAnimationRendering]);
 
 
   useEffect(() => {
@@ -92,3 +92,4 @@ export const Articles = () => {
 
 
 
+ */
