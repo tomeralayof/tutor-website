@@ -1,95 +1,31 @@
-/* import React, { useCallback, useEffect, useState } from "react";
+import React, { useRef, useState } from "react";
 import articleSource from "./data.json";
 
-import "../../styles/articles/articles.css";
-import "../../styles/about/info.css";
+import { RenderPostContent } from "./RenderPostContent";
+import { RenderPostFooter } from "./RenderPostFooter";
+import { AnimationBtn } from "./AnimationBtn";
+
+const INITIAL_ANIMATION_DIV_CLASSNAME = "animation";
 
 export const Articles = () => {
+
   const [idxArticle, setIdxArticle] = useState(0);
-  const [articleTextAnimation, setArticleTextAnimation] = useState("article-title");
-  const [isAnimationDone, setIsAnimationDone] = useState(false);
   const [jsonArticles] = useState(articleSource);
-  const [isAnimationLeft] = useState(true);
+  const animatedElementRef = useRef(null);
 
-  const handleAnimationRendering = (moveAnimation, newArticleIdx) => {
-      setIdxArticle(newArticleIdx);
-      setArticleTextAnimation("article-title");
-      let nextAnimation = articleTextAnimation.concat(" ",moveAnimation);
-      setArticleTextAnimation(nextAnimation);
-      setIsAnimationDone(true);
-  }
+  const btnProps = {idxArticle,setIdxArticle,animatedElementRef};
 
-  const setupInitialState = useCallback(() => {
-    console.log("number of times the function called ....");
-
-    if(isAnimationLeft) {
-      handleAnimationRendering("move-next", idxArticle + 1);
-    }
-    else {
-      console.log("decrement ...");
-    }
-  
-  },[idxArticle,isAnimationLeft,handleAnimationRendering]);
-
-
-  useEffect(() => {
-    const animatedElement = document.querySelector(".article-title");
-    animatedElement.addEventListener("animationend", setupInitialState);
-
-    return () => {
-      animatedElement.removeEventListener("animationend", setupInitialState);
-    };
-  }, [setupInitialState]);
-
-
-  useEffect(()=> {
-    if(isAnimationDone) {
-      let doneAnimation = articleTextAnimation.concat(" ", "article-title");
-      setArticleTextAnimation(doneAnimation);
-      setIsAnimationDone(false);
-    }
-  },[isAnimationDone]);
-
-
-  const handleLeftClick = () => {
-    console.log("left clicked ...");
-  };
-  
-  const handleRightClick = () => {
-    console.log("right click ...")
-    let moveLeftAnimation = articleTextAnimation.concat(" ","move-left");
-    setArticleTextAnimation(moveLeftAnimation);
-  }
-  
   return (
     <div className = "article-container">
-
-      <h3 className = { articleTextAnimation } >
-        {jsonArticles[idxArticle].header}
-      </h3>
-
-      <h6 className = "article-paragraph">
-        { jsonArticles[idxArticle].paragraph}
-      </h6>
-
-      <div className="button-container">
-        <button className="left-button" onClick = { handleLeftClick }>
-          Click
-        </button>
-        <button className = "right-button" onClick = { handleRightClick }>
-          Click
-        </button>
+      <div ref = { animatedElementRef } className = { INITIAL_ANIMATION_DIV_CLASSNAME }>
+        <h3 className = "article-title"> {jsonArticles[idxArticle].header} </h3>
+        <RenderPostContent idxArticle = {idxArticle} jsonArticles = {jsonArticles} />
       </div>
 
-      <footer className="article-footer">
-        <div className="article-footer-text">
-          <p className="article-footer-paragraph"> { idxArticle + 1 } / 3</p>
-        </div>
-      </footer>
+      <AnimationBtn {...btnProps} />
+
+      <RenderPostFooter idxArticle = {idxArticle} length = {jsonArticles.length} />
+
     </div>
   );
 };
-
-
-
- */

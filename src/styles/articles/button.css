@@ -1,0 +1,30 @@
+@import url('mobile.css');
+
+.article-button {
+    position: relative;
+    width: 40px;
+    height: 40px;
+    line-height: 39px;
+    overflow: hidden;
+    text-align: center;
+    border: 20px solid #c8c;
+    border-radius: 50%;
+}
+
+.button-container {
+    border: 1px solid red;
+    height: 10%;
+    position: relative;
+    width: 30%;
+    top: 2%;
+    left: 30%;
+}
+
+.left-button {
+    float: left;
+    margin: 10px;
+  }
+  .right-button {
+    margin: 10px;
+    float: right;
+  }
