@@ -1,3 +1,5 @@
+import { inputData } from "../../../config/contact/inputData";
+
 const initInputObj = (data,idx) => {
     return {
       filedName : data.filedName,
@@ -10,14 +12,8 @@ const initInputObj = (data,idx) => {
 export const InitFildes = () => {
   
     let result = [];
-  
-    const input = [
-      {filedName : process.env.REACT_APP_INPUT_NAME , placeholder : "הכנס את שמך"},
-      {filedName : process.env.REACT_APP_INPUT_MESSAGE , placeholder : "מה תרצה ללמוד"},
-      {filedName : process.env.REACT_APP_INPUT_PHONE ,  placeholder : "השאר מספר טלפון"}
-    ]
-    
-    input.map((elem,idx) => result.push(initInputObj(elem,idx)));
+
+    inputData.map((elem,idx) => result.push(initInputObj(elem,idx)));
   
     return result;
   }

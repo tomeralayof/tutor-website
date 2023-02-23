@@ -1,6 +1,8 @@
 import React , {useState} from "react";
 
-import { btnSetter } from "./btnSetter";
+import { btnSetter } from "../../config/btnSetter";
+
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 export const RenderButtons = ( {handleClick} ) => {
 
@@ -14,7 +16,7 @@ export const RenderButtons = ( {handleClick} ) => {
                     <button 
                     className = { btnState.className }
                     onClick={() => handleClick (btnState.animation) } >
-                    {btnState.content}
+                    <FontAwesomeIcon icon = { btnState.content } />
                     </button>
                 )
             })

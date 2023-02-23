@@ -77,11 +77,15 @@
     line-height: 1.5;
     color: #777;
   }
+
+  
   .card-two .contacts {
     width: 200px;
     max-width: 100%;
     margin: 0 auto 3.5rem;
   }
+
+
   .card-two .contacts a {
     display: block;
     width: 33.333333%;

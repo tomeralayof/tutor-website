@@ -1,5 +1,6 @@
 import  strService  from "../string/strService.js";
-import   navConfig   from "./navConfig.json";
+
+import navConfig from "../../config/navBar/navConfig.json";
 
 const { navLength } = navConfig;
 

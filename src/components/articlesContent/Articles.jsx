@@ -1,11 +1,12 @@
 import React, { useRef, useState } from "react";
-import articleSource from "./data.json";
+
+import articleSource from "../../config/articles/data.json";
 
 import { RenderPostContent } from "./RenderPostContent";
 import { RenderPostFooter } from "./RenderPostFooter";
 import { AnimationBtn } from "./AnimationBtn";
 
-const INITIAL_ANIMATION_DIV_CLASSNAME = "animation";
+const INITIAL_ANIMATION_DIV_CLASSNAME = "paragraph-container";
 
 export const Articles = () => {
 
@@ -17,13 +18,12 @@ export const Articles = () => {
 
   return (
     <div className = "article-container">
-      <div ref = { animatedElementRef } className = { INITIAL_ANIMATION_DIV_CLASSNAME }>
-        <h3 className = "article-title"> {jsonArticles[idxArticle].header} </h3>
+      
+      <div ref = {animatedElementRef} className = {INITIAL_ANIMATION_DIV_CLASSNAME} >
         <RenderPostContent idxArticle = {idxArticle} jsonArticles = {jsonArticles} />
       </div>
 
       <AnimationBtn {...btnProps} />
-
       <RenderPostFooter idxArticle = {idxArticle} length = {jsonArticles.length} />
 
     </div>

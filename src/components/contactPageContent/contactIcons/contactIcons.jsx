@@ -1,6 +1,6 @@
 import React from "react";
 
-import { contactIconsContent } from "./contactIconContent";
+import { contactIconsContent } from "../../../config/contact/contactIconContent"
 import { ContactIcon } from "./ContactIcon";
 
 import "../../../styles/contactIcons/contactIcons.css";

@@ -11,14 +11,16 @@
   }
 
   @media (max-width: 700px) {
-    .animation {
-      /* border: 10px solid yellowgreen; */
-      
-    }
     .article-paragraph {
+      box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+      left:50%;
+      transform: translateX(-50%);
+      width: 60%;
+      position: absolute;
+      top: 5%;
+      border: 1px solid  rgba(255, 192, 203, 0.8) ;
       font-size: 0.46rem;
       letter-spacing: 0.3px;
-      margin: 7px;
       direction: rtl;
     }
    
@@ -26,12 +28,15 @@
       padding: 0;
     }
 
-    .article-title {
-        position: relative;  
-        font-size: 0.6rem;
-        font-weight: bold;
-        margin-top: 0.2rem;
-        transition: transform 0.5s ease 0.1s;
+    .button-container {
+      /* border: 10px solid red; */
+
+      position: relative;
+      top: 60%;
+      left: 50%;
+      transform: translateX(-50%);
     }
+
+    
   }
   

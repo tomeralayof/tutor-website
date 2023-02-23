@@ -1,4 +1,5 @@
-import { imageUrl } from "./imageData";
+import { imageUrl } from "../../config/courses/imageData";
+
 import { Card } from "./card";
 
 const renderCard = (imageUrl,startIdx,currIdx) => {

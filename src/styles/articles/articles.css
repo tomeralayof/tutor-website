@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Yellowtail&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@900&display=swap');
-@import url('mobile.css');
+
 
 .article-container {
     background-color: rgb(253, 238, 238);
@@ -12,9 +12,6 @@
     top: 15%;
     height: 70%;
     border: 1px solid black;
-    /* padding: 4rem; */
-    /* border: 10px solid red; */
-
     box-shadow: 0 10px 7px -5px rgba(0, 0, 0, 0.4);
 }
 
@@ -25,14 +22,25 @@
     margin-top: 20px;
     transition: transform 0.5s ease 0.1s;
 }
-  
-.article-title {
-    font-size: 24px;
-    font-weight: bold;
-    margin-top: 20px;
-    transition: transform 0.5s ease 0.1s;
-  }
-  
-.animation {
-    /* border: 1px solid red; */
+
+
+.article-container::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: url('https://images.unsplash.com/photo-1453928582365-b6ad33cbcf64?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1473&q=80');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  opacity: 0.1;
 }
+  
+  /* move left animation. */
+
+ 
+  
+
+
