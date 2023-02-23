@@ -16,12 +16,12 @@
       left:50%;
       transform: translateX(-50%);
       width: 60%;
-      position: absolute;
+      
       top: 5%;
       border: 1px solid  rgba(255, 192, 203, 0.8) ;
-      font-size: 0.46rem;
+      font-size: 0.64rem;
       letter-spacing: 0.3px;
-      direction: rtl;
+     
     }
    
     .paragraph-container {
@@ -29,14 +29,11 @@
     }
 
     .button-container {
-      /* border: 10px solid red; */
-
       position: relative;
-      top: 60%;
+      top: 70%;
       left: 50%;
       transform: translateX(-50%);
     }
 
-    
   }
   
