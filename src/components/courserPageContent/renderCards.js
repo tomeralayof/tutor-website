@@ -1,15 +1,15 @@
-import { imageUrl } from "../../config/courses/imageData";
+import { courseData } from "../../config/courses/imageData";
 
 import { Card } from "./card";
 
-const renderCard = (imageUrl,startIdx,currIdx) => {
+const renderCard = (courseData,startIdx,currIdx) => {
     return (
-        <Card key = {startIdx + currIdx} imageUrl = {imageUrl} idx = {startIdx + currIdx}/>
+        <Card key = {startIdx + currIdx} courseData = {courseData} idx = {startIdx + currIdx}/>
     )
 }
 
 const renderSameRowCards = (startIdx,endIdx) => {
-    return imageUrl.slice(startIdx,endIdx).map((imguUrl,currIdx,startIdx) =>
+    return courseData.slice(startIdx,endIdx).map((imguUrl,currIdx,startIdx) =>
                                                 renderCard(imguUrl,currIdx,startIdx));
 }
 
@@ -25,12 +25,12 @@ export const renderCards = ( numberOfCardsInRow ) => {
     
     let result = [];
 
-    const numOfRows = Math.ceil(imageUrl.length / numberOfCardsInRow);
+    const numOfRows = Math.ceil(courseData.length / numberOfCardsInRow);
     let cssRow = "cards-container1";
     
     for (let i = 0; i < numOfRows; ++i) {
         const startIdx = i * numberOfCardsInRow;
-        const endIdx = Math.min(startIdx + numberOfCardsInRow, imageUrl.length);
+        const endIdx = Math.min(startIdx + numberOfCardsInRow, courseData.length);
         const showCardsSameRow = renderSameRowCards(startIdx,endIdx);
         result.push(renderRow(showCardsSameRow,cssRow));
         cssRow = `${cssRow} ${cssRow}--bottom`;

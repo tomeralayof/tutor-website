@@ -4,6 +4,11 @@ import { Courses } from "../pages/CoursesPage";
  import { ArticlesPage } from "../pages/ArticlePage";
 import { ContactPage } from "../pages/ContactPage";
 
+/* tests */
+/* import { RotationTest } from "../tests/rotation"; */
+
+
+
 const setupPage = (page,idx) => {
   const cssClass = 'st-panel';
   const cssClassActive = `${cssClass} st-color`;

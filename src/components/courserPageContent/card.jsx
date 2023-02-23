@@ -1,10 +1,21 @@
 import React from "react";
 
-export const Card = ( {imageUrl,idx} ) => {
+export const Card = ( { courseData,idx } ) => {
     return (
         <div className = "course-card">
-            <div className = "image-container1">
-                <img src = {imageUrl} alt = {`course-${idx + 1}`}  />
+
+            <div class = "content">
+
+            <div className = "content image-container1">
+                <img src = {courseData.url} alt = {`course-${idx + 1}`}  />
+            </div>
+
+            <div className = "content content-back">
+                <div class = "card-back">
+                {courseData.name}
+                </div>
+            </div>
+
             </div>
         </div>
     )
