@@ -6,7 +6,6 @@ import  formValidatorService  from "../../../services/form/formValidatorService.
 import { InitFildes } from "./setupInputData";
 
 import { RenderInputFileds } from "./renderInputFildes";
-import { ContactIcons } from "../contactIcons/contactIcons.jsx";
 import { SuccessMessage } from "./SuccessMessage";
 
 import "../../../styles/form/contactForm.css";
