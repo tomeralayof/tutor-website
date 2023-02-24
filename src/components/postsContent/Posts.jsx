@@ -1,6 +1,6 @@
 import React, { useRef, useState } from "react";
 
-import articleSource from "../../config/articles/data.json";
+import articleSource from "../../config/posts/data.json";
 
 import { RenderPostContent } from "./RenderPostContent";
 import { RenderPostFooter } from "./RenderPostFooter";
@@ -8,7 +8,7 @@ import { AnimationBtn } from "./AnimationBtn";
 
 const INITIAL_ANIMATION_DIV_CLASSNAME = "paragraph-container";
 
-export const Articles = () => {
+export const Posts = () => {
 
   const [idxArticle, setIdxArticle] = useState(0);
   const [jsonArticles] = useState(articleSource);

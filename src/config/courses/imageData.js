@@ -17,25 +17,36 @@ export const courseData = [
     },
     {
         name : "C++",
-        url : "https://www.educative.io/v2api/editorpage/5393602882568192/image/6038586442907648"
+        url : "https://www.educative.io/v2api/editorpage/5393602882568192/image/6038586442907648",
+        style : {
+            background: "linear-gradient(to right bottom, silver 10%, teal 90% 100%)",
+            color : "black"
+        }
     },
 
     {
         name : "Node Js",
         url : "https://informatics.uii.ac.id/wp-content/uploads/2022/09/nodejs.png",
         style : {
-            backgroundColor : "#68a063",
+            background: "linear-gradient(to right bottom, #3c873a 20%, #68a063 60% 100%)",
         }
     },
 
     {
         name : "React",
-        url : "https://reactjs.org/logo-og.png"
+        url : "https://reactjs.org/logo-og.png",
+        style : {
+            background: "linear-gradient(to right bottom, black 5%, #61DBFB 95% 100%)",
+        }
     },
 
     {
         name : "Data Structures",
-        url : "https://i.ytimg.com/vi/Qmt0QwzEmh0/maxresdefault.jpg"
+        url : "https://i.ytimg.com/vi/Qmt0QwzEmh0/maxresdefault.jpg",
+        style : {
+            background: "black",
+            color : "white"
+        }
     },
 
     {
@@ -49,6 +60,10 @@ export const courseData = [
 
     {
         name : "C languge",
-        url : "https://1.bp.blogspot.com/-KnGVLo7U7gQ/Xx0E8Sh8KtI/AAAAAAAAhnE/THS8q3fq9zg3jWTQqFr2s0XuE_M4BABNQCLcBGAsYHQ/w1200-h630-p-k-no-nu/free%2BC%2BProgramming%2Bcourses%2Bfor%2Bbeginners.png"
+        url : "https://1.bp.blogspot.com/-KnGVLo7U7gQ/Xx0E8Sh8KtI/AAAAAAAAhnE/THS8q3fq9zg3jWTQqFr2s0XuE_M4BABNQCLcBGAsYHQ/w1200-h630-p-k-no-nu/free%2BC%2BProgramming%2Bcourses%2Bfor%2Bbeginners.png",
+        style : {
+            backgroundColor : "#baeeff",
+            color : "black"
+        }
     }
 ]

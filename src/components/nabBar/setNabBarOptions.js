@@ -1,3 +1,5 @@
+import navBarConfig from "../../config/navBar/navConfig.json";
+
 const setOption = (label,idx) => {
     return {
         id: `st-control-${idx + 1}`,
@@ -9,9 +11,9 @@ const setOption = (label,idx) => {
 export const setNavBartOptions = () => {
     const optionSetter = [];
 
-    const labelArr = ["צור קשר","מאמרים", "? מה אני מלמד", " אני ואני מאמין", "ברוכים הבאים"];
+    console.log(navBarConfig.labels);
 
-    labelArr.map((label,i) => optionSetter.push(setOption(label,i)));
+    navBarConfig.labels.map((label,i) => optionSetter.push(setOption(label,i)));
     
     return optionSetter;
 }

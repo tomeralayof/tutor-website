@@ -49,6 +49,6 @@ export const AnimationBtn = (btnProps) => {
     }
     
     return (
-        <RenderButtons handleClick = { handleClick }  />
+        <RenderButtons idxArticle = { idxArticle } handleClick = { handleClick }  />
     )
 }
