@@ -16,7 +16,7 @@ export const RenderButtons = ( {handleClick} ) => {
                     <button 
                     className = { btnState.className }
                     onClick={() => handleClick (btnState.animation) } >
-                    <FontAwesomeIcon icon = { btnState.content } />
+                    <FontAwesomeIcon style={{ color: 'DodgerBlue' }} icon = { btnState.content } />
                     </button>
                 )
             })

@@ -10,9 +10,9 @@ export const Card = ( { courseData,idx } ) => {
                 <img src = {courseData.url} alt = {`course-${idx + 1}`}  />
             </div>
 
-            <div className = "content content-back">
+            <div style= { courseData.style } className = "content content-back">
                 <div class = "card-back">
-                {courseData.name}
+                { courseData.name }
                 </div>
             </div>
 

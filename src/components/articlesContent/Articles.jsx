@@ -17,7 +17,15 @@ export const Articles = () => {
   const btnProps = {idxArticle,setIdxArticle,animatedElementRef};
 
   return (
+
+    <React.Fragment>
+      
     <div className = "article-container">
+      <div className = "background"></div>
+      <header className = "foo"></header>
+
+    <header className="header">
+    </header>
       
       <div ref = {animatedElementRef} className = {INITIAL_ANIMATION_DIV_CLASSNAME} >
         <RenderPostContent idxArticle = {idxArticle} jsonArticles = {jsonArticles} />
@@ -27,5 +35,6 @@ export const Articles = () => {
       <RenderPostFooter idxArticle = {idxArticle} length = {jsonArticles.length} />
 
     </div>
+    </React.Fragment>
   );
 };
