@@ -139,6 +139,12 @@
 
 /* Adjust .registration-form for mobile sizes */
 @media (max-width: 600px) {
+
+  .success {
+    background-color: #753a88;
+    box-shadow: none;
+  }
+
   .registration-form {
     width: 90%;
     top: 50%;

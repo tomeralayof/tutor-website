@@ -68,34 +68,10 @@ export const ContactForm = () => {
             )
         }
 
-       <SuccessMessage isSuccessMsg = {isSuccessMsg} successMsg = {successMsg} />
-        <ContactIcons/>
+      <SuccessMessage isSuccessMsg = {isSuccessMsg} successMsg = {successMsg} />
+
   </div>
 
   </React.Fragment>
 )
 }
-
-
-
-
-
-
-
-
-
-/* 
-
-
-console.log(form.current);
-
-
-<div className="con-icons">
-      
-
-      <button>hello</button>
-      <button>hello</button>
-      <button>hello</button>
-      </div>
-
-*/

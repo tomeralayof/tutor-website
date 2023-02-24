@@ -1,7 +1,7 @@
 import { WelcomePage } from "../pages/welcomePage";
 import { AboutPage } from "../pages/AboutPage";
 import { Courses } from "../pages/CoursesPage";
- import { PostsPage } from "../pages/PostsPage";
+import { PostsPage } from "../pages/PostsPage";
 import { ContactPage } from "../pages/ContactPage";
 
 const setupPage = (page,idx) => {
