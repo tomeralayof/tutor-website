@@ -1,7 +1,5 @@
 import React, { useState } from "react";
 
-import "../../styles/about/info.css";
-
 const renderIcons = ( contacts ) => {
     return contacts.map((contact, index) => (
         <a key = {index} href = "google.http"><i class = {contact}></i></a>

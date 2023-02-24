@@ -1,0 +1,17 @@
+.card-two h3 {
+    position: relative;
+    margin: 80px 0 30px;
+    text-align: center;
+  }
+
+  /* check about it .... */
+  .card-two h3::after {
+    content: "";
+    position: absolute;
+    bottom: -15px;
+    left: 50%;
+    margin-left: -15px;
+    width: 30px;
+    height: 1px;
+    background: #000;
+  }

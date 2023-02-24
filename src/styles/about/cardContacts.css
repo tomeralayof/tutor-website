@@ -1,0 +1,52 @@
+    .card-two .contacts {
+        width: 200px;
+        max-width: 100%;
+        margin: 0 auto 3.5rem;
+      }
+    
+    
+      .card-two .contacts a {
+        display: block;
+        width: 33.333333%;
+        float: left;
+        text-align: center;
+        color: #c8c;
+      }
+      
+      .card-two .contacts a:hover {
+        color: #333;
+      }
+      .card-two .contacts a:hover .fa::before {
+        color: #fff;
+      }
+      .card-two .contacts a:hover .fa::after {
+        top: 0;
+      }
+      .card-two .contacts a .fa {
+        position: relative;
+        width: 40px;
+        height: 40px;
+        line-height: 39px;
+        overflow: hidden;
+        text-align: center;
+        border: 2px solid #c8c;
+        border-radius: 50%;
+      }
+      
+      .card-two .contacts a .fa:before {
+        position: relative;
+        z-index: 1;
+      }
+      .card-two .contacts a .fa::after {
+        content: "";
+        position: absolute;
+        top: -50px;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        transition: top 0.3s;
+        background: #c8c;
+      }
+      .card-two .contacts a:last-of-type .fa {
+        line-height: 36px;
+      }
