@@ -29,3 +29,24 @@
   .article-footer-paragraph {
     color: white !important;
   }
+
+
+
+  .footer-second {
+    position: absolute;
+    height: 100px;
+    width: 100%;
+    background-color: #c8c;
+    text-align: center;
+    bottom: 0;
+}
+
+.footer-second::after {
+  content: '';
+  transform: skewY(8deg);
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 50px;
+}

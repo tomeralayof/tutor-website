@@ -1,39 +1,27 @@
-@media (max-width: 1200px) {
-    .animation {
-      /* border: 10px solid black; */
-    }
-
-    .article-paragraph {
-      font-size: 0.7rem;
-      letter-spacing: 0.6px;
-      direction: rtl;
-    }
-  }
-
   @media (max-width: 700px) {
     .article-paragraph {
-      box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
-      left:50%;
-      transform: translateX(-50%);
-      width: 60%;
-      
-      top: 5%;
-      border: 1px solid  rgba(255, 192, 203, 0.8) ;
-      font-size: 0.64rem;
-      letter-spacing: 0.3px;
-     
-    }
-   
-    .paragraph-container {
-      padding: 0;
+      font-size: 0.6rem;
+      margin: 0 0 3px;
+      line-height: 1.5rem;
     }
 
     .button-container {
-      position: relative;
-      top: 70%;
-      left: 50%;
-      transform: translateX(-50%);
+      top: 60%;
+      width: 80%; 
     }
 
+    .button-container button {
+      padding: 12px 16px;
+      width: 50px;
+    }
+
+    .footer-second::after {
+      content: '';
+      transform: skewY(6deg);
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+    }
   }
   
