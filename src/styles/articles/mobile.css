@@ -1,4 +1,9 @@
   @media (max-width: 700px) {
+
+    .article-container {
+      top: 15%;
+    }
+
     .article-paragraph {
       font-size: 0.6rem;
       margin: 0 0 3px;
