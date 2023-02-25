@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { renderCards } from "../components/courserPageContent/renderCards.js";
+import { renderCards } from "../components/courses/renderCards.js";
 
 import "../styles/courses/courseCard.css";
 

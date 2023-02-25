@@ -1,10 +1,12 @@
 import React, { useState } from "react";
+import { ContactIcons } from "../../common/contactIcons";
 
-const renderIcons = ( contacts ) => {
+
+/* const renderIcons = ( contacts ) => {
     return contacts.map((contact, index) => (
-        <a key = {index} href = "google.http"><i class = {contact}></i></a>
+        <a key = {index} href = "google.http"><i class = {contact} ></i></a>
     ));
-}
+} */
 
 export const AboutCard = ( props ) => {
   const [ scrrenSize ] = useState(window.innerWidth);
@@ -20,7 +22,7 @@ export const AboutCard = ( props ) => {
           {props.paragraph}
         </div>
         <div className = "contacts">
-            {props.icons != null ? renderIcons(props.icons) : null}
+            {props.icons != null ? <ContactIcons/> : null}
           <div className = "clear"></div>
         </div>
          {

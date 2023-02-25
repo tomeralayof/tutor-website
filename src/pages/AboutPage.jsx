@@ -1,5 +1,5 @@
 import React from "react";
-import { PrepareCards } from "../components/aboutPageContent/prepareCards";
+import { PrepareCards } from "../components/about/prepareCards";
 
 import "../styles/about/aboutPage.css";
 
