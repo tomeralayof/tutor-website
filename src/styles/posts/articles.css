@@ -1,7 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Yellowtail&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@900&display=swap');
 
-
 .background {
   position: absolute;
   height: 30px;
@@ -21,8 +20,6 @@
   transform: translateX(-50%);
   height: 5vh;
 }
-
-
 
 .article-container {
   
@@ -60,10 +57,3 @@
   background-position: center;
   opacity: 0.06;
 }
-  
-  /* move left animation. */
-
- 
-  
-
-

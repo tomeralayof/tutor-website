@@ -1,14 +1,8 @@
 import React, { useState } from "react";
 import { ContactIcons } from "../../common/contactIcons";
 
+export const AboutCardTemplate = ( props ) => {
 
-/* const renderIcons = ( contacts ) => {
-    return contacts.map((contact, index) => (
-        <a key = {index} href = "google.http"><i class = {contact} ></i></a>
-    ));
-} */
-
-export const AboutCard = ( props ) => {
   const [ scrrenSize ] = useState(window.innerWidth);
 
     return (
@@ -21,10 +15,12 @@ export const AboutCard = ( props ) => {
         <div className = "desc">
           {props.paragraph}
         </div>
-        <div className = "contacts">
-            {props.icons != null ? <ContactIcons/> : null}
+         
+         <div className = "contacts">
+          { props.icons != null ? <ContactIcons/> : null }
           <div className = "clear"></div>
         </div>
+
          {
           scrrenSize >= 760 && (
               <footer>

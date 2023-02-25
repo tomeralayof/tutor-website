@@ -8,7 +8,6 @@ import { InitFildes } from "./setupInputData";
 import { RenderInputFileds } from "./renderInputFildes";
 import { SuccessMessage } from "./SuccessMessage";
 
-import "../../../styles/form/contactForm.css";
 
 export const ContactForm = () => {
   const inputData = InitFildes();

@@ -1,12 +1,12 @@
 import { setupCardsContent } from "./setupCardsContent";
-import { AboutCard } from "./AboutCard";
+import { AboutCardTemplate } from "./AboutCardTemplate";
 
 export const PrepareCards = () => {
     let cardsPreparedToRender = [];
     
     setupCardsContent().forEach((cardContent) =>
       cardsPreparedToRender.push (
-        <AboutCard { ...cardContent } key = { cardContent.cardNameHeader } />
+        <AboutCardTemplate { ...cardContent } key = { cardContent.cardNameHeader } />
       )
     );
   

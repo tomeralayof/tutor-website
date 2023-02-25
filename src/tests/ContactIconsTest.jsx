@@ -2,8 +2,10 @@ import React from "react";
 
 import contactIcons from "../config/contactIcons/contactIcons.json";
 
-export const ContactIcons = ({ style }) => {
-    return (
+import "./ContactsIconsTest.css";
+
+export const ContactIconsTest = ({ style }) => {
+    return (       
         <div className = "contacts-container">
         <div className = "contacts">
             {contactIcons.map((contact,idx) => {

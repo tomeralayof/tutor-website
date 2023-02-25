@@ -4,7 +4,6 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faUser, faArrowUp ,faEnvelope } from "@fortawesome/free-solid-svg-icons";
 import { faCheck ,faPhone } from '@fortawesome/free-solid-svg-icons';
 
-import "../../../styles/form/formButton.css";
 
 export const Button = ( {filed, idx , lastIdx , handleBtnClicked } ) => {
 

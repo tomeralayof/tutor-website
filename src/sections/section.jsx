@@ -1,6 +1,6 @@
 import React from "react";
 
-import "../styles/Section/section.css"
+import "../styles/sections/section.css"
 
 export const Section = ({ page }) => (
     <section className={page.cssClass} id={`st-panel-${page.id}`}>
