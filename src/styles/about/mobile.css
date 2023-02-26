@@ -6,7 +6,7 @@
 
   .card {
     margin: 1rem;
-  } 
+  }
 }
 
  @media only screen and (max-width: 780px) {
@@ -80,7 +80,7 @@
   .cards-container {
   border: 1px solid red;
   top: 8%;
-  max-height: 600px;
+  /* max-height: 600px; */
   }
   
   .card {
