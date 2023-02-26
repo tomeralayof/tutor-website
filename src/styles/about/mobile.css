@@ -78,8 +78,8 @@
 
 @media only screen and (max-width: 560px) {
   .cards-container {
-    border: 1px solid red;
-    top: 8%;
+    /* border: 1px solid red; */
+    top: 14%;
   }
 
   .card {
