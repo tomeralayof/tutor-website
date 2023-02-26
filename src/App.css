@@ -1,4 +1,3 @@
-@import url("./styles/sections/main.css");
 @import url("./styles/navBar/main.css");
 @import url("./styles/about/main.css");
 @import url("./styles/posts/main.css");
@@ -7,7 +6,9 @@
 
 @import url('//fonts.googleapis.com/css?family=Josefin+Slab:400,700');
 
- body {
+@import url("./styles/sections/main.css");
+
+body {
    overflow: hidden;
  }
  a {
@@ -24,6 +25,7 @@
 
  .st-scroll,
  .st-panel {
+  
    position: relative;
    width: 100%;
    height: 100%;   
@@ -97,3 +99,64 @@
    top: 50%;
    -webkit-backface-visibility: hidden;
  }
+ 
+  /* media */
+  @media screen and (max-width: 600px) {
+   .st-panel h2 {
+    font-size: 2.5rem;
+   }   
+   .st-container > a {
+     font-size: 13px;
+   }
+ }
+ @media screen and (max-width: 450px) {
+   .st-container > a {
+     font-size: 10px;
+   }
+
+   .st-panel h2 {
+    font-size: 1.5rem;
+   }
+   
+   .st-deco {
+     width: 120px;
+     height: 120px;
+     margin-left: -60px;
+   }
+   
+   [data-icon]:after {
+     font-size: 60px;
+     -webkit-transform: rotate(-45deg) translateY(15%);
+     -moz-transform: rotate(-45deg) translateY(15%);
+     -o-transform: rotate(-45deg) translateY(15%);
+     -ms-transform: rotate(-45deg) translateY(15%);
+     transform: rotate(-45deg) translateY(15%);
+   }
+ }
+
+
+ .nav-instraction-container {
+  height: 20%;
+  width: 60%;
+  position: relative;
+  top: 60%;
+  margin: 0 auto;
+ }
+
+ .content-container {
+  position: relative;
+  display: flex;
+ }
+
+.paragraph__text {
+  margin: 0 2rem;
+}
+
+@media screen and (max-width: 1000px) {
+  .paragraph__text {
+    margin: 0 0.17rem;
+    padding: 20px;
+  }
+}
+
+/* st deco change ... */
