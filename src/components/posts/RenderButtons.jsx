@@ -1,9 +1,8 @@
 import React , { useCallback, useState } from "react";
 
-import { btnSetter } from "../../config/btnSetter";
-
 import articles from "../../config/posts/data.json";
 
+import { btnSetter } from "../../config/btnSetter";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 const LENGTH = articles.length;

@@ -8,7 +8,7 @@ const App = () => {
   return (
     <React.Fragment>
       <div className= "container">
-        <div className="st-container">
+        <div className = "st-container">
         <NavBar />
         <Sections />
         </div>

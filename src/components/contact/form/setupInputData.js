@@ -16,4 +16,4 @@ export const InitFildes = () => {
     inputData.map((elem,idx) => result.push(initInputObj(elem,idx)));
   
     return result;
-  }
+}

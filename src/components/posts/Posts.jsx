@@ -29,7 +29,6 @@ export const Posts = () => {
 
       <AnimationBtn {...btnProps} />
 
-      
       <RenderPostFooter idxArticle = {idxArticle} length = {jsonArticles.length} />
 
     </div>

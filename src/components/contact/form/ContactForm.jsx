@@ -4,12 +4,11 @@ import React, { useState, useRef } from "react";
 import  formValidatorService  from "../../../services/form/formValidatorService.js";
 
 import { InitFildes } from "./setupInputData";
-
 import { RenderInputFileds } from "./renderInputFildes";
 import { SuccessMessage } from "./SuccessMessage";
 
-
 export const ContactForm = () => {
+
   const inputData = InitFildes();
   const [fields,setFields] = React.useState(inputData);
   const [isSuccessMsg,setIsSuccessMsg] = useState(false);
@@ -29,7 +28,7 @@ export const ContactForm = () => {
     setFields(newState);
   }
   
-  const handleBtnClicked = (idx) => {  
+  const handleBtnClicked = (idx) => { 
     const newState = [...fields];
     newState[idx].divClass = `${newState[idx].divClass} fold-up`;
     setFields(newState);
@@ -60,8 +59,11 @@ export const ContactForm = () => {
         {
           !isSuccessMsg && (
               <form ref = { form } >
-                <RenderInputFileds fields = { fields } handleInputChange = { handleInputChange } 
-                                  handleBtnClicked = { handleBtnClicked } />
+                <RenderInputFileds
+                fields = { fields }
+                handleInputChange = { handleInputChange } 
+                handleBtnClicked = { handleBtnClicked } 
+                />
               </form>
             )
         }
