@@ -1,12 +1,12 @@
 @media only screen and (max-width: 1200px) {
-  /* .cards-container {
+  .cards-container {
+    border: 10px solid red;
     top: 50%;
-    transform: translateY(-50%);
   }
 
   .card {
     margin: 1rem;
-  }  */
+  } 
 }
 
  @media only screen and (max-width: 780px) {
@@ -78,13 +78,20 @@
 
 @media only screen and (max-width: 560px) {
   .cards-container {
-    /* border: 1px solid red; */
-    top: 14%;
+  border: 1px solid red;
+  top: 8%;
+  max-height: 600px;
   }
-
+  
   .card {
-    width: 80%;
-    margin: 0.2rem auto;
-    height: 23vh;
+  width: 80%;
+  margin: 0.2rem auto;
+  height: 23vh;
+  }
+}
+
+@media only screen and (max-height: 900px) {
+  .cards-container {
+  top: 14%;
   }
 }
