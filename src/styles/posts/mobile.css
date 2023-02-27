@@ -26,6 +26,10 @@
     line-height: 2rem;
   }
 
+  .article-container {
+    top: 15%;
+  }
+
   .button-container button {
     padding: 7px 16px;
     width: 50px;
@@ -39,38 +43,3 @@
     line-height: 1rem;
   }
 }
-
-
-  
-  /* @media (max-width: 700px) {
-
-    .article-container {
-      top: 15%;
-    }
-
-    .article-paragraph {
-      font-size: 0.6rem;
-      margin: 0 0 3px;
-      line-height: 1.5rem;
-    }
-
-    .button-container {
-      top: 60%;
-      width: 80%; 
-    }
-
-    .button-container button {
-      padding: 12px 16px;
-      width: 50px;
-    }
-
-    .footer-second::after {
-      content: '';
-      transform: skewY(6deg);
-      top: 0;
-      left: 0;
-      right: 0;
-      bottom: 0;
-    }
-  } */
-  
