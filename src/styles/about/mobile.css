@@ -96,24 +96,13 @@
 
 
 
-@media only screen and (max-width: 320px) {
+@media only screen and (max-width: 500px) {
   .cards-container {
     border: 10px solid yellow;
   }
+
+  .card-two .desc {
+     font-size: 0.6rem;
+  }
 }
-
-
-
-/*
-
-have to change :
-320px (for smartphones and small devices)
-768px (for tablets and larger smartphones)
-*/
-
-/*
-  done :
-  1024px (for smaller laptops and desktops)
-  1280px (for larger laptops and desktops)
-  1440px and higher (for larger screens and high-resolution displays)
-*/
+}
