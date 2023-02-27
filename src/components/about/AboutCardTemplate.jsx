@@ -24,7 +24,7 @@ export const AboutCardTemplate = ( props ) => {
         </div>
          
          <div className = "contacts">
-          { props.icons != null ? <ContactIcons/> : null }
+          { props.icons != null ? <div className = "icon-con"><ContactIcons/></div>  : null }
           <div className = "clear"></div>
         </div>
 
