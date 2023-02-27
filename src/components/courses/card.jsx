@@ -1,9 +1,10 @@
 import React from "react";
 
+import "../../styles/courses/courseCard.css";
+
 export const Card = ( { courseData,idx } ) => {
     return (
         <div className = "course-card">
-
             <div class = "content">
 
             <div className = "content image-container1">

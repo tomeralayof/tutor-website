@@ -2,6 +2,8 @@ import { courseData } from "../../config/courses/imageData";
 
 import { Card } from "./card";
 
+import "../../styles/courses/courseCard.css";
+
 const renderCard = (courseData,startIdx,currIdx) => {
     return (
         <Card key = {startIdx + currIdx} courseData = {courseData} idx = {startIdx + currIdx}/>

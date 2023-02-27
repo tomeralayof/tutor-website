@@ -11,6 +11,8 @@ const numberCardsInRow = () => {
 export const Courses = () => {
   const [numberOfCardsInRow] = useState(numberCardsInRow());
 
+  console.log(numberOfCardsInRow);
+
   return (
     <div className="container1">
       {renderCards(numberOfCardsInRow)}
