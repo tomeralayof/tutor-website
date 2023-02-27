@@ -76,6 +76,10 @@
     transform: translateX(-50%);
     top: 6%;
   }
+
+  .card {
+    margin: 0.6vh;
+  }
   
   .card-two {
      box-shadow: 0 5px 7px -5px rgba(0, 0, 0, 0.3); 
