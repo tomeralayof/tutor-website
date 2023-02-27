@@ -159,15 +159,20 @@ body {
     font-size: 1.5rem;
    }
    
-   .st-deco {
-    width: 40px; 
-    height: 40px; 
-    margin-left: -30px; 
-  }
-
-  .st-deco[data-icon]:after {
-    font-size: 15px;
-  }
+    .st-deco {
+     width: 120px;
+     height: 120px;
+     margin-left: -60px;
+   }
+   
+   [data-icon]:after {
+     font-size: 60px;
+     -webkit-transform: rotate(-45deg) translateY(15%);
+     -moz-transform: rotate(-45deg) translateY(15%);
+     -o-transform: rotate(-45deg) translateY(15%);
+     -ms-transform: rotate(-45deg) translateY(15%);
+     transform: rotate(-45deg) translateY(15%);
+   }
  }
 
 
