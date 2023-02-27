@@ -52,9 +52,17 @@
   line-height: 36px;
 }
 
-.contacts-container--new-position {
-  position: absolute;
-  top: 0%;
-  left: 0%;
-  transform: translate(-50%, -50%);
+
+
+
+@media only screen and (max-width: 500px) {
+  .contacts-container .contacts a .fa { 
+    width: 30px;
+    height: 30px;
+    line-height: 26px;
+  }
+  
+  .contacts-container .contacts a:last-of-type .fa {
+    line-height: 26px;
+  }
 }

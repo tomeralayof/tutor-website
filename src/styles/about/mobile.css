@@ -11,8 +11,6 @@
   }
 }
 
-/* tested : iphone 7 plus, ipad */
-
 @media only screen and (max-width: 768px) {
   .cards-container {
     transform: translateY(0%);
@@ -63,18 +61,12 @@
     }
 }
 
-
-
-
-
 @media screen and (max-height: 999px) {
   .icon-con {
     position: relative;
     bottom: 4vh;
   }
 }
-
-
 
 @media only screen and (max-width: 500px) {
   .cards-container {
@@ -87,15 +79,12 @@
   
   .card-two {
      box-shadow: 0 5px 7px -5px rgba(0, 0, 0, 0.3); 
-
   }
 
   .card-two .desc {
      font-size: 0.5rem;
      
   }
-
-
 }
 
 
