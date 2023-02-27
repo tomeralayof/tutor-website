@@ -122,6 +122,24 @@ body {
     }
   }
 
+  @media screen and (max-width : 768px)  {
+    .st-deco {
+      width: 100px; 
+      height: 100px; 
+      margin-left: -50px; 
+    }
+
+    .st-deco[data-icon]:after {
+      width: 60px; 
+      height: 60px; 
+      line-height: 60px;
+      font-size: 36px;
+      top: 70%;
+      left: 70%;
+      margin: -30px 0 0 -30px; 
+      transform: rotate(-45deg) translateY(0);
+    }
+  }
 
 
   @media screen and (max-width: 600px) {
@@ -142,19 +160,14 @@ body {
    }
    
    .st-deco {
-     width: 120px;
-     height: 120px;
-     margin-left: -60px;
-   }
-   
-   [data-icon]:after {
-     font-size: 60px;
-     -webkit-transform: rotate(-45deg) translateY(15%);
-     -moz-transform: rotate(-45deg) translateY(15%);
-     -o-transform: rotate(-45deg) translateY(15%);
-     -ms-transform: rotate(-45deg) translateY(15%);
-     transform: rotate(-45deg) translateY(15%);
-   }
+    width: 40px; 
+    height: 40px; 
+    margin-left: -30px; 
+  }
+
+  .st-deco[data-icon]:after {
+    font-size: 15px;
+  }
  }
 
 

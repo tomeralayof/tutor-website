@@ -69,6 +69,12 @@
   .card-two .desc {
     font-size: 0.6rem;
   }
+  .cards-container {
+    top: 0%;
+    border: 1px solid red;
+    margin-top: 5%;
+  }
+
 }
 
 @media screen and (max-height: 999px) {
@@ -77,6 +83,8 @@
     bottom: 4vh;
   }
 }
+
+
 
 @media only screen and (max-width: 320px) {
   .cards-container {
