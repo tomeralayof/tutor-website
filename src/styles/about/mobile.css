@@ -79,10 +79,10 @@
 @media only screen and (max-width: 500px) {
   .cards-container {
     height: 65vh;
-    width: 60vw;
+    width: 75vw;
     left: 50%;
     transform: translateX(-50%);
-    top: 10%;
+    top: 7%;
   }
 
   .card-two .desc {
