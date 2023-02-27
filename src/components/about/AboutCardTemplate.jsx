@@ -1,9 +1,16 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { ContactIcons } from "../../common/contactIcons";
 
 export const AboutCardTemplate = ( props ) => {
 
   const [ scrrenSize ] = useState(window.innerWidth);
+  const [hasToShowFooler, sethasToShowFooler] = useState(false);
+
+  useEffect(() => {
+    if(scrrenSize > 768) {
+      sethasToShowFooler(true);
+    }
+  },[scrrenSize,hasToShowFooler]);
 
     return (
         <div className = "card card-two">
@@ -21,12 +28,7 @@ export const AboutCardTemplate = ( props ) => {
           <div className = "clear"></div>
         </div>
 
-         {
-          scrrenSize >= 760 && (
-              <footer>
-              </footer>
-          )
-         }
+        {hasToShowFooler ? <footer></footer> : null}
       </div>
     )
 }

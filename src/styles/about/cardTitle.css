@@ -1,7 +1,7 @@
 .card-two h3 {
-    position: relative;
-    margin: 80px 0 30px;
-    text-align: center;
+  position: relative;
+  margin: 10vh 0 5vh; /* adjust percentages as needed */
+  text-align: center;
   }
 
   /* check about it .... */
