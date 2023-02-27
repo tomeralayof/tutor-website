@@ -65,14 +65,19 @@
 }
 
 @media only screen and (max-width: 500px) {
-  .card-two .desc {
+  .cards-container {
+    height: 60vh;
+  }
+  
+
+ /*  .card-two .desc {
     font-size: 0.6rem;
   }
   .cards-container {
     top: 0%;
     
-    margin-top: 0%;
-  }
+    margin-top: 20%;
+  } */
 
 }
 
@@ -90,103 +95,6 @@
     border: 10px solid yellow;
   }
 }
-
-
-
-
-
-
-
-
- /* @media only screen and (max-width: 780px) {
-  .card-two header {
-    position: relative;
-    width: 100%;
-    height: 3vh;
-    background-color: #c8c;
-  }
-
-   .card-two header::after {
-    transform: skewY(4deg);
-    
-  }
-
-  .card-two h3 {
-    font-size: 0.8rem;
-  }
-
-  .card-two header .avatar {
-    position: absolute;
-    left: 50%;
-    margin-left: -30px;
-    top: 0;
-    z-index: 5;
-    width: 50px;
-    height: 50px;
-    border-radius: 50%;
-    overflow: hidden;
-    background: #ccc;
-    border: 3px solid #fff;
-  }
-  
-  .card-two header .avatar img {
-    max-width: 100%;
-    max-height: 100%;
-    object-fit: cover;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-  }
-
-  .card-two h3 {
-    position: relative;
-    margin: 4vh 0 3vh;
-    text-align: center;
-  }
-
-  .card-two .desc {
-    font-size: 0.6rem;
-    padding: 0 1rem ;
-  }
-
-
-  .card-two h3::after {
-    content: "";
-    position: absolute;
-    bottom: -10px;
-    left: 50%;
-    margin-left: -15px;
-    width: 30px;
-    height: 1px;
-    background: #000;
-  }
-
-  .card-two .contacts a .fa {
-    position: relative;
-    width: 7vw;
-    height: 4vh;
-    line-height: 46px;
-    overflow: hidden;
-    text-align: center;
-    border: 2px solid #c8c;
-    border-radius: 50%;
-  }
-
-}
-
-@media only screen and (max-width: 560px) {
-  .cards-container {
-  border: 10px solid blue;
-  top: 8%;
-  }
-  
-  .card {
-  width: 80%;
-  margin: 0.2rem auto;
-  height: 23vh;
-  }
-} */
 
 
 
