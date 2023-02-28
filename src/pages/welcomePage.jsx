@@ -11,12 +11,16 @@ export const WelcomePage = () => {
             <p>שיעורים פרטיים בתכנות במגוון שפות ולכל מטרה</p>
 
             <div className="nav-instraction-container">
-            <div className = "content-container">          
-                <p className = "paragraph">
+            <div className = "content-container">
+                <div className="navtext-location">
+                <h6 className = "paragraph">
                     <FontAwesomeIcon icon = {faArrowLeft} />
                         <span className = "paragraph__text">לניווט מהיר</span>
                     <FontAwesomeIcon icon={faArrowRight} />
-                </p>
+                </h6>
+                </div>
+
+
             </div>
             </div>
 

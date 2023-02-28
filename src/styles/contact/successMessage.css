@@ -1,7 +1,6 @@
-.success-msg p {
+.success-msg h6 {
     color: white;
     font-weight: 900;
-    letter-spacing: 2px;
     font-size: 18px;
     width: 100%;
      text-align: center;
@@ -41,4 +40,5 @@
     transition: all 0.2s ease-in;
     background: limegreen;
     margin-top: 0px;
+    text-align: center;
   }
