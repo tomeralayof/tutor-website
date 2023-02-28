@@ -1,7 +1,9 @@
-import React , { useState,useEffect } from "react";
+import React , { useState,useEffect,useContext } from "react";
 import { Header } from "../common/header";
 import { ContactForm } from "../components/contact/form/ContactForm";
 import { ContactIcons } from "../common/contactIcons";
+
+import keyboardContext from "../hooks/keyboardContext/createContext";
 
 const tabletIconPositionContainer = {
     position: "relative",
@@ -10,6 +12,8 @@ const tabletIconPositionContainer = {
 
 export const ContactPage = () => {
     const [is1024x600, setIs1024x600] = useState(false);
+
+    const { isKeyboardUp } = useContext(keyboardContext);
     
     useEffect(() => {
         const screenWidth = window.innerWidth;
@@ -26,7 +30,8 @@ export const ContactPage = () => {
         <ContactForm/>
         <div style = {is1024x600 ? tabletIconPositionContainer : null}
                 className = "icons-container">
-        <ContactIcons />
+        
+        { !isKeyboardUp ? <ContactIcons /> : null }
         </div>
         </React.Fragment>
     )

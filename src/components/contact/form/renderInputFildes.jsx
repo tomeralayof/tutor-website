@@ -8,7 +8,7 @@ export const RenderInputFileds = ( { fields,handleInputChange,handleBtnClicked }
             return (
               <div key = {idx} className = { filed.divClass } >
               
-              <RenderFiled 
+              <RenderFiled
               filed = { filed }
               handleInputChange = { handleInputChange }
               handleBtnClicked = { handleBtnClicked }
