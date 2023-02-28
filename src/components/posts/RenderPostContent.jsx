@@ -14,9 +14,8 @@ export const RenderPostContent = ({ post }) => {
     console.log(initialSize);
     console.log(resizeIfNeeded(initialSize,post.length));
     setFontSize(resizeIfNeeded(initialSize,post.length));
-  },[post]);
+  },[post,width,height]);
 
-  console.log(fontSize);
 
   return (
     <h6 style = {{fontSize: fontSize}} className = "article-paragraph">
