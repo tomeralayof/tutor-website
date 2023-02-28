@@ -1,5 +1,5 @@
 [
-    { "icon" :  "fa fa-whatsapp" , "url" : "www.facebook.com" },
-    { "icon" :  "fa fa-whatsapp" , "url" : "www.facebook.com" },
-    { "icon" :  "fa fa-envelope" , "url" : "www.facebook.com" }
+    { "icon" :  "fa fa-phone" , "url" : "tel:+972-54-249-2212" },
+    { "icon" :  "fa fa-whatsapp" , "url" : "https://wa.me/972542492212" },
+    { "icon" :  "fa fa-envelope" , "url" : "mailto:tomeralayof95959@gmail.com" }
 ]

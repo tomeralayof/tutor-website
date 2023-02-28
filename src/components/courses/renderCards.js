@@ -1,12 +1,16 @@
+import React from "react";
+
 import { courseData } from "../../config/courses/imageData";
 
 import { Card } from "./card";
 
-import "../../styles/courses/courseCard.css";
-
 const renderCard = (courseData,startIdx,currIdx) => {
     return (
-        <Card key = {startIdx + currIdx} courseData = {courseData} idx = {startIdx + currIdx}/>
+        <Card 
+            key = {startIdx + currIdx} 
+            courseData = {courseData} 
+            idx = {startIdx + currIdx}
+        />
     )
 }
 
@@ -23,13 +27,12 @@ const renderRow = (showCardsSameRow,cssRow) => {
     )
 }
 
-export const renderCards = ( numberOfCardsInRow ) => {
-    
+export const RenderCards = ({ numberOfCardsInRow }) => {
     let result = [];
 
     const numOfRows = Math.ceil(courseData.length / numberOfCardsInRow);
     let cssRow = "cards-container1";
-    
+
     for (let i = 0; i < numOfRows; ++i) {
         const startIdx = i * numberOfCardsInRow;
         const endIdx = Math.min(startIdx + numberOfCardsInRow, courseData.length);

@@ -24,7 +24,10 @@ export const Posts = () => {
     <header className = "line-up"></header>
       
       <div ref = {animatedElementRef} className = {INITIAL_ANIMATION_DIV_CLASSNAME} >
-        <RenderPostContent idxArticle = {idxArticle} jsonArticles = {jsonArticles} />
+        <RenderPostContent
+        post = { jsonArticles[idxArticle].paragraph }
+        animatedElementRef = {animatedElementRef}
+        />
       </div>
 
       <AnimationBtn {...btnProps} />

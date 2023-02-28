@@ -4,11 +4,13 @@
 
  .article-paragraph
   { 
+    font-size: 1rem;
     top: 30%;
     position: relative;
     color: #111;
     font-family: 'Open Sans',
-    sans-serif; font-size: 30px;
+    sans-serif;
+    font-size: 2rem;
     font-weight: 300;
     line-height: 3rem;
     margin: 0 0 72px;
@@ -20,6 +22,7 @@
 
 .paragraph-container {
   padding: 15px;
+  
   /* border: 10px solid red; */
   /* background-color: rgb(16, 14, 17);
   opacity: 0.12; */

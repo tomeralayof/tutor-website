@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { renderCards } from "../components/courses/renderCards.js";
+import { RenderCards } from "../components/courses/renderCards";
 
 import "../styles/courses/courseCard.css";
 
@@ -10,12 +10,10 @@ const numberCardsInRow = () => {
 
 export const Courses = () => {
   const [numberOfCardsInRow] = useState(numberCardsInRow());
-
-  console.log(numberOfCardsInRow);
-
+  
   return (
     <div className="container1">
-      {renderCards(numberOfCardsInRow)}
+      <RenderCards numberOfCardsInRow  = {numberOfCardsInRow}/>  
     </div>
   );
 };

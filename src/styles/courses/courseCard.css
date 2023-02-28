@@ -82,6 +82,7 @@ top: 50%;
 transform: translateY(-50%);
 }
 
+
 @media (max-width: 768px) {
   .container1 {
     top: 20%;
@@ -135,7 +136,6 @@ transform: translateY(-50%);
     }
   } 
 
-
 @media (max-width: 320px) {
   .container1 {
     width: 100%;
@@ -150,4 +150,3 @@ transform: translateY(-50%);
     margin: 10px; 
   }
 }
-
