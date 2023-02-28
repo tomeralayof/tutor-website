@@ -123,38 +123,31 @@
     font-weight: 100;
   }
 
+/*   @media (max-width: 350px) {
+    .registration-form {
+      top: 10%;
+    }
+  } */
 
 
 
-  /* media queries */
-
-  /* Adjust .con-icons for mobile sizes */
 @media (max-width: 600px) {
-  .con-icons {
-    flex-direction: column;
-    align-items: center;
-  }
-  .con-icons button {
-    margin: 10px 0;
-  }
-}
-
-/* Adjust .registration-form for mobile sizes */
-@media (max-width: 600px) {
-
-  .success {
-    background-color: #753a88;
-    box-shadow: none;
-  }
-
+  
   .registration-form {
     width: 90%;
     top: 50%;
   }
-  .registration-form header {
+  
+  /* .registration-form header {
     padding: 10px 20px;
     border-radius: 10px 10px 0 0;
+  } */
+
+  .registration-form header {
+    padding: none;
+    border-radius: none;
   }
+  
   .registration-form header h1 {
     font-size: 20px;
   }
@@ -168,5 +161,11 @@
   .registration-form form input {
     width: 100%;
     padding: 10px 20px;
+  }
+}
+
+@media (max-width: 320px) {
+  .registration-form {
+    top: 47%;
   }
 }

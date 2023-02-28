@@ -61,13 +61,6 @@
     }
 }
 
-@media screen and (max-height: 999px) {
-  .icon-con {
-    position: relative;
-    bottom: 4vh;
-  }
-}
-
 @media only screen and (max-width: 500px) {
   .cards-container {
     height: 68vh;
@@ -91,10 +84,35 @@
   }
 }
 
-
-
-/* @media only screen and (max-width: 500px) and (max-height : 600px) {
+@media only screen and (max-width: 400px) {
   .cards-container {
-    border: 1px solid black;
+    height: 77vh;
+  }
 }
-} */
+
+@media screen and (max-width: 450px) and  (max-height: 900px){
+  .icon-con {
+    margin: -2.5vh;
+   position: relative;
+ }
+}
+
+@media screen and (max-width: 450px) and  (max-height: 750px){
+  .icon-con {
+     margin: -3.5vh;
+    position: relative;
+  }
+  
+  .card-two header .avatar {
+    margin-left: -25px;
+    width: 40px;
+    height: 40px;
+  }
+}
+
+@media screen and (max-width: 450px) and  (max-height: 600px) {
+  .icon-con {
+    margin: -5.5vh;
+    position: relative;
+  }
+}
