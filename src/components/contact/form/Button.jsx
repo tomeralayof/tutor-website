@@ -24,9 +24,8 @@ export const Button = ( {filed, idx , lastIdx , handleBtnClicked } ) => {
     }
 
     return (
-        <div className = {!filed.isValid ? "animated-button" : "animated-button active-button"}>
-            {/* <span onClick = { !filed.isValid ? null :  () => handleBtnClicked(idx) } */}
-            <span onClick = {  () => handleBtnClicked(idx) }
+        <div className = {!filed.isValid ? "animated-button" : "animated-button active-button"}>            
+            <span onClick = { !filed.isValid ? null :  () => handleBtnClicked(idx) }
             className = "icon-paper-plane">  { renderIcon(filed,idx) }
           </span>
           </div>

@@ -1,7 +1,9 @@
-import React, { useState, useRef } from "react";
+import React, { useState, useRef,useContext } from "react";
 
-/* import  emailService  from "../../services/email/emailService.js"; */
+import emailService from "../../../services/email/emailService";
+
 import  formValidatorService  from "../../../services/form/formValidatorService.js";
+import keyboardContext from "../../../hooks/keyboardContext/createContext";
 
 import { InitFildes } from "./setupInputData";
 import { RenderInputFileds } from "./renderInputFildes";
@@ -12,11 +14,12 @@ export const ContactForm = () => {
   const form = useRef();
   const inputRef = useRef(null);
 
+  const { setIsKeyboardUp } = useContext(keyboardContext);
+
   const inputData = InitFildes();
   const [fields,setFields] = React.useState(inputData);
   const [isSuccessMsg,setIsSuccessMsg] = useState(false);
-  const [successMsg,setSuccessMsg] = useState("");
-
+  const [successMsg,setSuccessMsg] = useState("נשלח בהצלחה, אצור קשר בהקדם");
 
   const { ValidateName, ValidateMsg ,ValidateIsraeliPhoneNumber } = formValidatorService;
   const validators = [ValidateName, ValidateMsg, ValidateIsraeliPhoneNumber];
@@ -44,12 +47,12 @@ export const ContactForm = () => {
   }
 
   const handleSubmit = () => {
+    setIsKeyboardUp(false);
     try {
       setIsSuccessMsg(true);
-      /* emailService.SendUserMsg(form); */
-      setSuccessMsg("נשלח בהצלחה, אצור קשר בהקדם");
+      emailService.SendUserMsg(form);
     } catch(err) {
-      setSuccessMsg("הייתה בעיה בשליחת המייל, מוזמן לפנות אליי בלינק למטה")
+      setSuccessMsg("הייתה בעיה בשליחת הטופס, מוזמן לפנות אליי בלינק למטה");
     }
   };
   
@@ -73,7 +76,7 @@ export const ContactForm = () => {
               </form>
             )
         }
-
+      
       <SuccessMessage isSuccessMsg = {isSuccessMsg} successMsg = {successMsg} />
 
   </div>

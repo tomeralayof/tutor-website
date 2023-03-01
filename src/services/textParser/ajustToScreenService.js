@@ -16,11 +16,11 @@ const initialTextSize = (widht, height) => {
 const resizeIfNeeded = ( initialSize,length ) => {
 
     const size = initialSize.slice(0,3);
-    
 
     if(length > 271) {
-        const newSize = `${size - 0.3}rem`;
+        const newSize = `${size - 0.4}rem`;
         console.log(newSize);
+        return newSize;
     }
 
     return initialSize;

@@ -6,10 +6,9 @@ const ValidateName = (name) => {
 };
 
 const ValidateMsg = (msg) => {
-  const textRegex = /^(?=.*[A-Za-z].*[A-Za-z])[\u0590-\u05FFA-Za-z0-9]+$/;
+  const textRegex = /^[\u0590-\u05FFa-zA-Z0-9 ]+$/;
   return textRegex.test(msg);
 }
-
 const ValidateIsraeliPhoneNumber = (phoneNumber) => {
   const parsedNumber = parsePhoneNumberFromString(phoneNumber, 'IL');
   return parsedNumber && parsedNumber.isValid();

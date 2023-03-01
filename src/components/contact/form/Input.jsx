@@ -4,8 +4,6 @@ import keyboardContext from "../../../hooks/keyboardContext/createContext";
 
 export const Input = ({ filed ,handleInputChange,idx,inputRef }) => {
 
-  console.log("ref = ",inputRef);
-
   const isMobileDevice = /Mobi|Android/i.test(navigator.userAgent);
   const { setIsKeyboardUp } = useContext(keyboardContext);
 
