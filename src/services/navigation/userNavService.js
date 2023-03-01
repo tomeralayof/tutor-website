@@ -6,17 +6,25 @@ const { getStateUpdateParameters , updateNewState  } = stateUpdator;
 
 const handleKeyboardArrowEvent = (event,selectedOption,setSelectedOption) => {
 
-    const newState = getStateUpdateParameters(selectedOption,setSelectedOption,isArrowLeft,isArrowRight,event);
+    const newState = getStateUpdateParameters(selectedOption,
+                        setSelectedOption,isArrowLeft,isArrowRight,event);
     
     updateNewState(newState);
 }
 
-const handleScreenSwapEvent = (event,selectedOption,setSelectedOption,touchStartX ) => {
+const handleScreenSwapEvent = (event,selectedOption,setSelectedOption,
+    touchStartX, touchStartY ) => {
 
     const touchEndX = event.touches[0].clientX;
-    const touchDiff = touchStartX.current - touchEndX;
+    const touchDiffX = touchStartX.current - touchEndX;
 
-    const newState = getStateUpdateParameters(selectedOption,setSelectedOption,isSwapLeft,isSwapRight,touchDiff);
+    const touchCurrentY = event.touches[0].clientY;
+    const touchDeltaY = touchCurrentY - touchStartY.current;
+
+    const params = {touchDiffX,touchDeltaY};
+
+    const newState = getStateUpdateParameters(selectedOption,setSelectedOption,
+                isSwapLeft,isSwapRight,params);
 
     updateNewState(newState);
 }

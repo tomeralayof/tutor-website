@@ -4,7 +4,7 @@ const setOption = (label,idx) => {
     return {
         id: `st-control-${idx + 1}`,
         for : `st-panel-${idx + 1}`,
-        label 
+        label
     }
 }
 

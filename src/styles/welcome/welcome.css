@@ -1,0 +1,39 @@
+.content-container {
+    position: relative;
+    display: flex;
+   }
+  
+   .navtext-location {
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+   }
+   
+   .paragraph {
+    color: whitesmoke;
+    font-size: 2rem;
+   }
+  
+  
+  .paragraph__text {
+    margin: 0 2rem;
+  }
+  
+  @media screen and (max-width: 1000px) {
+    .paragraph__text {
+      margin: 0 0.17rem;
+      padding: 20px;
+    }
+  }
+  
+  @media screen and (max-width: 500px) {
+    .paragraph__text {
+      margin: 0 0.17rem;
+      padding: 20px;
+    }
+  
+    .paragraph {
+      color: whitesmoke;
+      font-size: 1rem;
+     }
+  }

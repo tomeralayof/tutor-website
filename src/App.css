@@ -1,4 +1,6 @@
+@import url("./styles/sections/main.css");
 @import url("./styles/navBar/main.css");
+@import url("./styles/welcome/main.css");
 @import url("./styles/about/main.css");
 @import url("./styles/courses/main.css");
 @import url("./styles/posts/main.css");
@@ -6,8 +8,6 @@
 @import url("./styles/common/main.css");
 
 @import url('//fonts.googleapis.com/css?family=Josefin+Slab:400,700');
-
-@import url("./styles/sections/main.css");
 
 body {
    overflow: hidden;
@@ -31,7 +31,6 @@ body {
    height: 100%;   
  }
  
- /* animation */
  .st-scroll {
    top: 0;
    left: 0;
@@ -62,8 +61,6 @@ body {
   top: 50%;
 }
 
- 
- /* Content elements */
  .st-deco {
    width: 200px;
    height: 200px;
@@ -100,8 +97,7 @@ body {
    transform: rotate(-45deg) translateY(25%);
  }
  
-
-
+ 
  /* media query for smaller rectangle in 1024 with pixes */
   @media screen and (max-width : 1024px) and (max-height: 600px)  {
     .st-deco {
@@ -183,43 +179,3 @@ body {
   top: 60%;
   margin: 0 auto;
  }
-
- .content-container {
-  position: relative;
-  display: flex;
- }
-
- .navtext-location {
-  position: relative;
-  left: 50%;
-  transform: translateX(-50%);
- }
- 
- .paragraph {
-  color: whitesmoke;
-  font-size: 2rem;
- }
-
-
-.paragraph__text {
-  margin: 0 2rem;
-}
-
-@media screen and (max-width: 1000px) {
-  .paragraph__text {
-    margin: 0 0.17rem;
-    padding: 20px;
-  }
-}
-
-@media screen and (max-width: 500px) {
-  .paragraph__text {
-    margin: 0 0.17rem;
-    padding: 20px;
-  }
-
-  .paragraph {
-    color: whitesmoke;
-    font-size: 1rem;
-   }
-}
