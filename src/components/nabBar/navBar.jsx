@@ -7,9 +7,9 @@ import { MobileVersion } from "./MobileVersion.jsx";
 
 /* st container before */
 
-export const NavBar = () => {
-
-    const [selectedOption, setSelectedOption] = useState("st-control-5");
+export const NavBar = ( { section } ) => {
+    
+    const [selectedOption, setSelectedOption] = useState(`st-control-${section}`);
     const mediaQuery = window.matchMedia("(pointer: coarse)");
     const [ hasTouchScreen ] = useState(mediaQuery.matches);
 
@@ -20,6 +20,6 @@ export const NavBar = () => {
     const props = { selectedOption, handleChange, RenderNavbar, setSelectedOption }
 
     
-    return !hasTouchScreen ? <DesktopVersion props = {props}/> : 
+    return !hasTouchScreen ? <DesktopVersion props = {props}/> :
                             <MobileVersion props = {props}/>
 }
