@@ -23,11 +23,9 @@ export const Posts = () => {
     <div className = "background"></div>
     <header className = "line-up"></header>
       
-      <div ref = {animatedElementRef} className = {INITIAL_ANIMATION_DIV_CLASSNAME} >
-        <RenderPostContent
-        post = { jsonArticles[idxArticle].paragraph }
-        animatedElementRef = {animatedElementRef}
-        />
+      <div ref = { animatedElementRef } className = {INITIAL_ANIMATION_DIV_CLASSNAME} >
+        <RenderPostContent post = { jsonArticles[idxArticle].paragraph } 
+                          animatedElementRef = {animatedElementRef}/>
       </div>
 
       <AnimationBtn {...btnProps} />

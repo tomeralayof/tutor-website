@@ -1,9 +1,10 @@
 import React from "react";
 
-export const RenderPostContent = ({ post }) => {
+export const RenderPostContent = ({ post,animatedElementRef }) => {
+
   return (
     <h6 className = "article-paragraph">
     { post }
-    </h6>
+    </h6> 
   )
 }

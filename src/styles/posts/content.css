@@ -1,15 +1,23 @@
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+Hebrew&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
+ 
+  .paragraph-container {
+    height: 60%;
+    width: 100%;
+    padding: 15px;
+  font-family: 'Rocher';
+  /* text-align: center; */
+  letter-spacing: .5px;
+}
 
- .article-paragraph
-  { 
-    font-size: 1rem;
-    top: 30%;
+
+
+.article-paragraph
+  {
     position: relative;
     color: #111;
-    font-family: 'Open Sans',
-    sans-serif;
+    font-family: 'Open Sans',sans-serif;
     font-size: 1.5rem;
     font-weight: 300;
     line-height: 1.5;
@@ -17,12 +25,4 @@
     text-align: justify;
     direction: rtl;
     z-index: 22;
- }
-
-
-.paragraph-container {
-  padding: 15px;
-  font-family: 'Rocher';
-  text-align: center;
-  letter-spacing: .5px;
-}
+  }
