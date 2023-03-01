@@ -29,7 +29,9 @@ const isSwapRight = (params) => {
 }
 
 const _checkParams = (touchDeltaY,event) => {
-    return !(Math.abs(touchDeltaY) > 50) && (!(event.touches.length > 1));
+    return !(Math.abs(touchDeltaY) > 50) && 
+          (!(event.touches.length > 1))  &&
+          window.devicePixelRatio === 1;
 }
 
 const eventTypeDeterminator = {
