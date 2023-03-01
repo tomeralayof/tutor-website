@@ -1,4 +1,3 @@
-/* nav bar */
 .st-container > input,
 .st-container > a {
   position: fixed;
@@ -25,7 +24,7 @@
 }
 
 
-.st-container:before {
+.st-container-active:before {
   content: '';
   position: fixed;
   width: 100%;
@@ -174,8 +173,6 @@
     }
   }
 
-
-  /* nav bar hat */
   .st-container > input:checked + a:after,
   .st-container > input:checked:hover + a:after{
   bottom: 100%;
