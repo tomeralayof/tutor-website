@@ -19,11 +19,6 @@ export const MobileVersion = ({ props }) => {
   // eslint-disable-next-line react-hooks/exhaustive-deps
   const handleTouchMove = useCallback(debounce((event) => {
     
-    if (event.touches.length > 1) {
-      // Ignore pinch/zoom gestures
-      return;
-    }
-
     handleScreenSwapEvent(event, selectedOption, setSelectedOption,
       touchStartX,touchStartY);
 

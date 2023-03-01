@@ -9,15 +9,18 @@ import { SuccessMessage } from "./SuccessMessage";
 
 export const ContactForm = () => {
 
+  const form = useRef();
+  const inputRef = useRef(null);
+
   const inputData = InitFildes();
   const [fields,setFields] = React.useState(inputData);
   const [isSuccessMsg,setIsSuccessMsg] = useState(false);
   const [successMsg,setSuccessMsg] = useState("");
 
-  const form = useRef();
 
   const { ValidateName, ValidateMsg ,ValidateIsraeliPhoneNumber } = formValidatorService;
   const validators = [ValidateName, ValidateMsg, ValidateIsraeliPhoneNumber];
+
 
   const handleInputChange = (e,idx) => {
     const inputValue = e.target.value;
@@ -28,7 +31,9 @@ export const ContactForm = () => {
     setFields(newState);
   }
   
-  const handleBtnClicked = (idx) => { 
+  const handleBtnClicked = (idx) => {
+    inputRef.current.focus();
+
     const newState = [...fields];
     newState[idx].divClass = `${newState[idx].divClass} fold-up`;
     setFields(newState);
@@ -62,7 +67,8 @@ export const ContactForm = () => {
                 <RenderInputFileds
                 fields = { fields }
                 handleInputChange = { handleInputChange } 
-                handleBtnClicked = { handleBtnClicked } 
+                handleBtnClicked = { handleBtnClicked }
+                inputRef = { inputRef }
                 />
               </form>
             )

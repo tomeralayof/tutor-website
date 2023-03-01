@@ -21,7 +21,7 @@ const handleScreenSwapEvent = (event,selectedOption,setSelectedOption,
     const touchCurrentY = event.touches[0].clientY;
     const touchDeltaY = touchCurrentY - touchStartY.current;
 
-    const params = {touchDiffX,touchDeltaY};
+    const params = { touchDiffX,touchDeltaY,event };
 
     const newState = getStateUpdateParameters(selectedOption,setSelectedOption,
                 isSwapLeft,isSwapRight,params);

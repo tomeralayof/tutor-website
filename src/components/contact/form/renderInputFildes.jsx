@@ -2,7 +2,7 @@ import React from "react"
 
 import {RenderFiled } from "./RenderFiled";
 
-export const RenderInputFileds = ( { fields,handleInputChange,handleBtnClicked } ) => {
+export const RenderInputFileds = ( { fields,handleInputChange,handleBtnClicked,inputRef } ) => {
     return (
         fields.map((filed, idx) => {
             return (
@@ -14,6 +14,7 @@ export const RenderInputFileds = ( { fields,handleInputChange,handleBtnClicked }
               handleBtnClicked = { handleBtnClicked }
               idx = {idx}
               fields = {fields}
+              inputRef = { inputRef }
               />
               </div>
             )

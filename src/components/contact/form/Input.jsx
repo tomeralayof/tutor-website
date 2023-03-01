@@ -2,7 +2,10 @@ import React , { useContext } from "react";
 
 import keyboardContext from "../../../hooks/keyboardContext/createContext";
 
-export const Input = ({ filed ,handleInputChange,idx }) => {
+export const Input = ({ filed ,handleInputChange,idx,inputRef }) => {
+
+  console.log("ref = ",inputRef);
+
   const isMobileDevice = /Mobi|Android/i.test(navigator.userAgent);
   const { setIsKeyboardUp } = useContext(keyboardContext);
 
@@ -31,6 +34,7 @@ export const Input = ({ filed ,handleInputChange,idx }) => {
       name = { filed.filedName }
       onFocus = {handleInputFocus}
       onBlur = {handleInputBlur}
+      ref = { inputRef }
     />
   )
 }

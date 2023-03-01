@@ -8,9 +8,9 @@ const isArrowRight = (event) => {
 
 const isSwapLeft = (params) => {
 
-    const {touchDiffX, touchDeltaY } = params;
+    const {touchDiffX, touchDeltaY,event } = params;
 
-    if(!_checkParams(touchDeltaY)) {
+    if(!_checkParams(touchDeltaY,event)) {
         return false;
     }
 
@@ -19,17 +19,17 @@ const isSwapLeft = (params) => {
 
 const isSwapRight = (params) => {
     
-    const {touchDiffX, touchDeltaY} = params;
+    const {touchDiffX, touchDeltaY,event} = params;
 
-    if(!_checkParams(touchDeltaY)) {
+    if(!_checkParams(touchDeltaY,event)) {
         return false;
     }
 
     return touchDiffX > 0;
 }
 
-const _checkParams = (touchDeltaY) => {
-    return !(Math.abs(touchDeltaY) > 50);
+const _checkParams = (touchDeltaY,event) => {
+    return !(Math.abs(touchDeltaY) > 50) && (!(event.touches.length > 1));
 }
 
 const eventTypeDeterminator = {
