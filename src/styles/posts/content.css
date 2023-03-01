@@ -1,28 +1,33 @@
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+Hebrew&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
- 
-  .paragraph-container {
-    height: 60%;
-    width: 100%;
-    padding: 15px;
-  font-family: 'Rocher';
-  /* text-align: center; */
-  letter-spacing: .5px;
-}
 
-
-
-.article-paragraph
-  {
+ .article-paragraph
+  { 
+    font-size: 1rem;
+    top: 30%;
     position: relative;
     color: #111;
-    font-family: 'Open Sans',sans-serif;
-    font-size: 1.5rem;
+    font-family: 'Open Sans',
+    sans-serif;
+    font-size: 2rem;
     font-weight: 300;
-    line-height: 1.5;
+    line-height: 3zrem;
     margin: 0 0 72px;
     text-align: justify;
     direction: rtl;
     z-index: 22;
-  }
+ }
+
+
+.paragraph-container {
+  padding: 15px;
+  
+  /* border: 10px solid red; */
+  /* background-color: rgb(16, 14, 17);
+  opacity: 0.12; */
+  /* box-shadow: 6px 7px 6px rgba(1, 0, 0, 0.6); */
+  font-family: 'Rocher';
+  text-align: center;
+  letter-spacing: .5px;
+}
