@@ -1,11 +1,10 @@
-import React, { useState ,useContext,useEffect } from 'react';
+import React, { useState ,useContext,useEffect, useRef } from 'react';
 import "./App.css"
 
 import { NavBar } from './components/nabBar/navBar';
 import { Sections } from "./sections/sections";
 
 import LoadingPage from './loading/loadingPage';
-
 
 import keyboardContext from "./hooks/keyboardContext/createContext";
 
@@ -14,21 +13,27 @@ const App = () => {
   const [section,setSection] = useState(5);
   const [isLoaded, setIsLoaded] = useState(false);
 
+  const hasLoaded = useRef(false);
+
   useEffect(() => {
     setSection(1);
   },[isKeyboardUp]);
 
-
   useEffect(() => {
-    const handleLoad = () => {
+    if (hasLoaded.current) {
       setIsLoaded(true);
-    };
-
-    window.addEventListener('load', handleLoad);
-
-    return () => {
-      window.removeEventListener('load', handleLoad);
-    };
+    } else {
+      const handleLoad = () => {
+        hasLoaded.current = true;
+        setIsLoaded(true);
+      };
+  
+      window.addEventListener('load', handleLoad);
+  
+      return () => {
+        window.removeEventListener('load', handleLoad);
+      };
+    }
   }, []);
 
   return (
