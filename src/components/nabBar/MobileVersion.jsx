@@ -10,7 +10,8 @@ export const MobileVersion = ({ props }) => {
   const { selectedOption,handleChange,RenderNavbar,setSelectedOption } = props;
   const { handleScreenSwapEvent } = userNavService;
   const { debounce } = utils;
-  const [pixelRatio] = useState(window.visualViewport.scale);
+  const [pixelRatio] = useState(window.screen.width / window.innerWidth);
+
 
   const handleTouchStart = useCallback((event) => {
       touchStartX.current = event.touches[0].clientX;
@@ -19,6 +20,7 @@ export const MobileVersion = ({ props }) => {
     
   // eslint-disable-next-line react-hooks/exhaustive-deps
   const handleTouchMove = useCallback(debounce((event) => {
+    console.log("res = ",window.outerWidth / window.innerWidth);
     
     handleScreenSwapEvent(event, selectedOption, setSelectedOption,
       touchStartX,touchStartY,pixelRatio);

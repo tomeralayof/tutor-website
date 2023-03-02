@@ -1,3 +1,5 @@
+
+
 const isArrowLeft = (event) => {
     return event.key === 'ArrowLeft';
 }
@@ -10,7 +12,9 @@ const isSwapLeft = (params) => {
 
     const {touchDiffX, touchDeltaY,event,pixelRation } = params;
 
-    console.log(pixelRation);
+   
+
+    console.log("res = ",pixelRation);
     if(!_checkParams(touchDeltaY,event,pixelRation)) {
         return false;
     }
