@@ -1,4 +1,4 @@
-import { useCallback, useRef , useEffect } from "react";
+import { useCallback, useRef , useEffect, useState } from "react";
 import userNavService from "../../services/navigation/userNavService.js";
 import utils from "../../services/utils.js";
 
@@ -10,6 +10,7 @@ export const MobileVersion = ({ props }) => {
   const { selectedOption,handleChange,RenderNavbar,setSelectedOption } = props;
   const { handleScreenSwapEvent } = userNavService;
   const { debounce } = utils;
+  const [pixelRatio] = useState(window.visualViewport.scale);
 
   const handleTouchStart = useCallback((event) => {
       touchStartX.current = event.touches[0].clientX;
@@ -20,9 +21,9 @@ export const MobileVersion = ({ props }) => {
   const handleTouchMove = useCallback(debounce((event) => {
     
     handleScreenSwapEvent(event, selectedOption, setSelectedOption,
-      touchStartX,touchStartY);
+      touchStartX,touchStartY,pixelRatio);
 
-    }, 100), [selectedOption, handleScreenSwapEvent, setSelectedOption, touchStartX,touchStartY]);
+    }, 100), [selectedOption, handleScreenSwapEvent, setSelectedOption, touchStartX,touchStartY,pixelRatio]);
 
   useEffect(() => {
       window.addEventListener("touchstart", handleTouchStart);

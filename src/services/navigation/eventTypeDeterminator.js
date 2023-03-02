@@ -8,9 +8,10 @@ const isArrowRight = (event) => {
 
 const isSwapLeft = (params) => {
 
-    const {touchDiffX, touchDeltaY,event } = params;
+    const {touchDiffX, touchDeltaY,event,pixelRation } = params;
 
-    if(!_checkParams(touchDeltaY,event)) {
+    console.log(pixelRation);
+    if(!_checkParams(touchDeltaY,event,pixelRation)) {
         return false;
     }
 
@@ -19,19 +20,19 @@ const isSwapLeft = (params) => {
 
 const isSwapRight = (params) => {
     
-    const {touchDiffX, touchDeltaY,event} = params;
+    const {touchDiffX, touchDeltaY,event, pixelRation} = params;
 
-    if(!_checkParams(touchDeltaY,event)) {
+    if(!_checkParams(touchDeltaY,event,pixelRation)) {
         return false;
     }
 
     return touchDiffX > 0;
 }
 
-const _checkParams = (touchDeltaY,event) => {
+const _checkParams = (touchDeltaY,event,pixelRatio) => {
     return !(Math.abs(touchDeltaY) > 50) && 
           (!(event.touches.length > 1))  &&
-          window.devicePixelRatio === 1;
+          pixelRatio === 1;
 }
 
 const eventTypeDeterminator = {
