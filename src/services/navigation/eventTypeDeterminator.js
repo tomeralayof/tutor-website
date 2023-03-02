@@ -35,8 +35,9 @@ const isSwapRight = (params) => {
 
 const _checkParams = (touchDeltaY,event,pixelRatio) => {
     return !(Math.abs(touchDeltaY) > 50) && 
-          (!(event.touches.length > 1))  &&
-          pixelRatio === 1;
+          (!(event.touches.length > 1))
+       /*      &&
+          pixelRatio === 1; */
 }
 
 const eventTypeDeterminator = {
